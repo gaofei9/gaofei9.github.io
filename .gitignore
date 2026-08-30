@@ -1,0 +1,12 @@
+# Local editor and tool config, not part of the site
+.cursor/
+.mcp.json
+
+# Design reference image (Canva template), not published
+Blush Bronze Website Launch Promo Instagram Post.png
+
+# Jekyll build output, if a local build is ever run
+_site/
+.jekyll-cache/
+vendor/
+Gemfile.lock

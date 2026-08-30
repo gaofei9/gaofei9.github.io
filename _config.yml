@@ -1,0 +1,34 @@
+title: Fei Gao
+description: Fei Gao — researcher. Research, publications, and resources.
+url: "https://gaofei9.github.io"
+
+markdown: kramdown
+permalink: /blog/:year/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - tags
+  layouts:
+    tag: tag
+  permalinks:
+    tag: "/tag/:name/"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .cursor
+  - .mcp.json
+  - "Blush Bronze Website Launch Promo Instagram Post.png"

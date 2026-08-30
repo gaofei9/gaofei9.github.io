@@ -10,14 +10,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@400;600;800&display=swap">
   <style>
     :root {
-      --paper: #FBF8F2;
-      --band: #F2ECDF;
-      --ink: #33302B;
-      --ink-soft: #6E675C;
-      --teal: #1F7A72;
-      --teal-deep: #155950;
-      --coral: #DE7A5A;
-      --line: #E3DCCD;
+      --paper: #F8F2F0;
+      --band: #F1E4E4;
+      --ink: #3F4847;
+      --ink-soft: #7B6A66;
+      --bronze: #A0735A;
+      --bronze-deep: #8A5F4B;
+      --rose: #C1968F;
+      --line: #E8D6D2;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -33,38 +33,38 @@
     }
     h1, h2, h3 { font-family: Lora, Georgia, serif; font-weight: 600; line-height: 1.2; margin: 0; text-wrap: balance; }
     p { margin: 0; }
-    a { color: var(--teal); }
-    a:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px; }
+    a { color: var(--bronze); }
+    a:focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; border-radius: 2px; }
 
     .eyebrow {
       font-size: 0.74rem; font-weight: 800; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--coral); margin-bottom: 0.8rem;
+      text-transform: uppercase; color: var(--rose); margin-bottom: 0.8rem;
     }
 
     .nav {
       position: sticky; top: 0; z-index: 10;
       display: flex; align-items: center; justify-content: space-between; gap: 1rem;
       padding: 1rem 1.5rem;
-      background: rgba(251, 248, 242, 0.92);
+      background: rgba(248, 242, 240, 0.92);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
     }
     .wordmark { font-family: Lora, Georgia, serif; font-size: 1.15rem; font-weight: 600; color: var(--ink); text-decoration: none; }
     .nav-links { display: flex; align-items: center; gap: 1.6rem; font-size: 0.93rem; font-weight: 600; }
     .nav-links a { color: var(--ink-soft); text-decoration: none; }
-    .nav-links a:hover { color: var(--teal); }
+    .nav-links a:hover { color: var(--bronze); }
     .nav-cta {
-      color: #fff !important; background: var(--teal);
+      color: #fff !important; background: var(--bronze);
       border-radius: 999px; padding: 0.4rem 1.1rem;
     }
-    .nav-cta:hover { background: var(--teal-deep); }
+    .nav-cta:hover { background: var(--bronze-deep); }
 
     .wrap { max-width: 66rem; margin: 0 auto; padding: 0 1.5rem; }
 
     .hero { padding: 5rem 0 4.5rem; }
     .hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: center; }
     .hero h1 { font-size: clamp(2.5rem, 6.5vw, 3.8rem); margin-bottom: 1rem; }
-    .hero h1 em { font-style: italic; color: var(--teal); }
+    .hero h1 em { font-style: italic; color: var(--bronze); }
     .lede { color: var(--ink-soft); font-size: 1.15rem; max-width: 32rem; margin-bottom: 2rem; }
     .actions { display: flex; flex-wrap: wrap; gap: 0.9rem; }
     .btn {
@@ -74,26 +74,26 @@
     }
     .btn:hover { transform: translateY(-1px); }
     @media (prefers-reduced-motion: reduce) { .btn:hover { transform: none; } }
-    .btn-teal { background: var(--teal); color: #fff; }
-    .btn-teal:hover { background: var(--teal-deep); }
-    .btn-line { color: var(--teal); border: 2px solid var(--teal); }
-    .btn-line:hover { background: var(--teal); color: #fff; }
+    .btn-bronze { background: var(--bronze); color: #fff; }
+    .btn-bronze:hover { background: var(--bronze-deep); }
+    .btn-line { color: var(--bronze); border: 2px solid var(--bronze); }
+    .btn-line:hover { background: var(--bronze); color: #fff; }
 
     .photo {
       aspect-ratio: 1; border-radius: 50%; max-width: 20rem; margin: 0 auto;
-      background: radial-gradient(circle at 35% 30%, #EADFC9, #DCCFB2);
+      background: radial-gradient(circle at 35% 30%, #EFDCD5, #DFC5B6);
       border: 6px solid #fff;
       box-shadow: 0 12px 40px rgba(51, 48, 43, 0.12);
       display: flex; align-items: center; justify-content: center; overflow: hidden;
     }
     .photo img { width: 100%; height: 100%; object-fit: cover; }
-    .photo span { font-family: Lora, Georgia, serif; font-size: 4rem; color: rgba(31, 122, 114, 0.5); }
+    .photo span { font-family: Lora, Georgia, serif; font-size: 4rem; color: rgba(160, 115, 90, 0.55); }
 
     .wave { display: block; width: 100%; height: 3.5rem; color: var(--band); }
 
     .band { background: var(--band); padding: 3.5rem 0; }
     .cred-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: center; }
-    .cred h3 { font-size: 1.1rem; color: var(--teal-deep); margin-bottom: 0.3rem; }
+    .cred h3 { font-size: 1.1rem; color: var(--bronze-deep); margin-bottom: 0.3rem; }
     .cred p { color: var(--ink-soft); font-size: 0.95rem; }
 
     .section { padding: 5rem 0 0; }
@@ -105,7 +105,7 @@
     .story-note {
       background: #fff; border: 1px solid var(--line); border-radius: 1rem;
       padding: 1.6rem 1.8rem; font-family: Lora, Georgia, serif; font-style: italic;
-      font-size: 1.15rem; line-height: 1.55; color: var(--teal-deep);
+      font-size: 1.15rem; line-height: 1.55; color: var(--bronze-deep);
       box-shadow: 0 8px 30px rgba(51, 48, 43, 0.06);
     }
 
@@ -117,24 +117,24 @@
     }
     .card h3 { font-size: 1.15rem; }
     .card p { color: var(--ink-soft); font-size: 0.95rem; }
-    .card-dot { width: 2.2rem; height: 0.45rem; border-radius: 999px; background: var(--coral); }
-    .card:nth-child(2n) .card-dot { background: var(--teal); }
+    .card-dot { width: 2.2rem; height: 0.45rem; border-radius: 999px; background: var(--rose); }
+    .card:nth-child(2n) .card-dot { background: var(--bronze); }
 
     .pub { display: grid; grid-template-columns: 4.5rem 1fr; gap: 1.3rem; padding: 1.3rem 0; border-top: 1px solid var(--line); }
     .pub:last-of-type { border-bottom: 1px solid var(--line); }
-    .pub-year { font-family: Lora, Georgia, serif; color: var(--coral); font-variant-numeric: tabular-nums; }
+    .pub-year { font-family: Lora, Georgia, serif; color: var(--rose); font-variant-numeric: tabular-nums; }
     .pub-title { font-weight: 800; margin-bottom: 0.2rem; }
     .pub-venue { color: var(--ink-soft); font-size: 0.92rem; }
     .pub-more { margin-top: 1.4rem; color: var(--ink-soft); font-size: 0.95rem; }
 
     .cta-band {
-      margin: 5rem 0 0; background: var(--teal); border-radius: 1.25rem;
+      margin: 5rem 0 0; background: var(--bronze); border-radius: 1.25rem;
       padding: 3rem; color: #fff;
       display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;
     }
     .cta-band h2 { font-size: 1.9rem; margin-bottom: 0.5rem; }
     .cta-band p { color: rgba(255, 255, 255, 0.85); max-width: 28rem; }
-    .btn-paper { background: var(--paper); color: var(--teal-deep); }
+    .btn-paper { background: var(--paper); color: var(--bronze-deep); }
     .btn-paper:hover { background: #fff; }
 
     .footer {
@@ -159,6 +159,7 @@
       <a href="#story">My story</a>
       <a href="#work">What I do</a>
       <a href="#publications">Publications</a>
+      <a href="blog/">Blog</a>
       <a href="#contact" class="nav-cta">Say hello</a>
     </div>
   </nav>
@@ -174,7 +175,7 @@
           guidance for ..."]
         </p>
         <div class="actions">
-          <a class="btn btn-teal" href="#work">See what I do →</a>
+          <a class="btn btn-bronze" href="#work">See what I do →</a>
           <a class="btn btn-line" href="#story">My story</a>
         </div>
       </div>

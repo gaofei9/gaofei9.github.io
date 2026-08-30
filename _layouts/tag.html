@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Tag</p>
+    <h2>{{ page.title }}</h2>
+    <p class="tag-count">{{ page.posts | size }} post{% if page.posts.size != 1 %}s{% endif %} · <a href="{{ '/blog/' | relative_url }}">all posts</a></p>
+  </div>
+  <ol class="pub-list">
+    {% for post in page.posts %}
+    <li class="pub">
+      <span class="pub-year">{{ post.date | date: "%Y" }}</span>
+      <div>
+        <p class="pub-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></p>
+        <p class="pub-venue">{{ post.date | date: "%B %-d, %Y" }}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
