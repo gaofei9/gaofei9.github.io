@@ -2,6 +2,10 @@
 .cursor/
 .mcp.json
 
+# CV source file: contains phone number and address, keep off the public site
+Gao_CV_updated.docx
+*.docx
+
 # Design reference image (Canva template), not published
 Blush Bronze Website Launch Promo Instagram Post.png
 
