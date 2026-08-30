@@ -3,26 +3,16 @@
 This folder is a complete website for GitHub Pages, with a blog and a
 newsletter signup.
 
-## The two design versions
+## The design
 
-Both versions now share the same blush and bronze color scheme, taken from
-the "Blush Bronze" promo image in this folder.
-
-- `index.html` + `style.css`: the editorial version. Serif headlines, a
-  sharper grid, bronze headings on blush pink.
-- `warm.html`: the friendly version. Rounded buttons, a wave divider, the
-  same colors. All its styling is inside the file itself.
-
-Whichever file is named `index.html` is the homepage. To switch to the warm
-version, rename `index.html` to `editorial.html`, then rename `warm.html`
-to `index.html`. The blog pages use `style.css` in either case.
+`index.html` is the homepage and `style.css` holds all the styling. The
+blush and bronze color scheme comes from the "Blush Bronze" promo image.
+The blog pages share the same stylesheet.
 
 ## How to edit
 
-Open the folder in VS Code and edit the HTML files. Every place that needs
-your real content is marked with [square brackets]. Search for `[` to find
-them all. To add your photo, put `portrait.jpg` into the `images/` folder
-and follow the comment in the HTML near "Replace with your photo".
+Open the folder in VS Code and edit `index.html`. To swap your photo,
+replace the files in `images/`, keeping the same names.
 
 ## The blog
 
