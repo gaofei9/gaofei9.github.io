@@ -297,6 +297,12 @@ a:focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; border-
 .topic-card h3 { font-size: 1.2rem; }
 .topic-card p { color: var(--ink-muted); font-size: 0.95rem; }
 
+.research-summary-copy {
+  color: var(--ink-muted);
+  max-width: 44rem;
+  margin-bottom: 1.5rem;
+}
+
 /* Publications */
 
 .pub-list {

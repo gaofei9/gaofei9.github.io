@@ -1,0 +1,91 @@
+# ===========================================================
+# RESEARCH PAGE TEXT (the page at /research/)
+#
+# Same rules as home.yml: edit the text to the right of each
+# colon, leave the labels alone, keep the indentation.
+# The homepage shows the first three publications from the
+# list below automatically.
+# ===========================================================
+
+page:
+  title: "Research"
+  eyebrow: "Research"
+  heading: "Designing data-informed and motivating learning environments"
+  # Shown under the heading. HTML ok.
+  intro: >-
+    I am a Professor in Instructional Design and Technology at Bowling Green
+    State University. My research examines how the design of online learning
+    environments shapes learners' motivation, participation, and learning.
+
+# One entry per card. The number is just the label shown on the card.
+areas:
+  - number: "I"
+    title: "Learning analytics and self-regulated learning"
+    text: >-
+      I identify patterns in students' online learning behaviors and design
+      actionable dashboards that help them monitor their progress, reflect
+      on their learning, and regulate their learning strategies.
+  - number: "II"
+    title: "Gamification, simulation, and immersive learning"
+    text: >-
+      I investigate how gamified and simulated learning environments,
+      including leaderboards and virtual reality, influence students'
+      motivation, engagement, participation, and learning outcomes.
+  - number: "III"
+    title: "Motivation and emotion in online learning"
+    text: >-
+      I examine how motivational beliefs and emotional experiences shape
+      students' engagement, participation, persistence, learning strategies,
+      and academic outcomes in online environments.
+  - number: "IV"
+    title: "Artificial intelligence in education"
+    text: >-
+      I investigate how students and instructors perceive, adopt, and use
+      artificial intelligence in educational settings, with attention to
+      variation across learner and instructor populations.
+
+publications:
+  eyebrow: "Publications"
+  heading: "Selected work"
+  # One entry per publication, newest first.
+  # Leave details, link_text, or link_url empty ("") to hide them.
+  items:
+    - year: "2026"
+      title: "Examining the role of personality traits and perceived need satisfaction in gamified learning"
+      authors: "Gao, F., Liu, J., Rogers, K., Li, L., &amp; Liu, R."
+      venue: "Knowledge Management &amp; E-Learning"
+      details: ""
+      link_text: ""
+      link_url: ""
+    - year: "2025"
+      title: "Towards tailored online learning: Predicting students' online learning patterns with perceived needs satisfaction"
+      authors: "Gao, F., &amp; Liu, R."
+      venue: "Educational Technology and Society"
+      details: "28(2), 1–14"
+      link_text: "JSTOR"
+      link_url: "https://www.jstor.org/stable/48827974"
+    - year: "2024"
+      title: "Advancing gamification research and practice with three underexplored ideas in self-determination theory"
+      authors: "Gao, F."
+      venue: "TechTrends"
+      details: "68, 661–671"
+      link_text: "DOI"
+      link_url: "https://doi.org/10.1007/s11528-024-00968-9"
+    - year: "2023"
+      title: "Effects of virtual reality simulation on medical students' learning and motivation in human parasitology instruction"
+      authors: "Gao, F., Qiu, J., Chen, L., Li, L., Ji, M., &amp; Zhang, R."
+      venue: "BMC Medical Education"
+      details: "23, 630"
+      link_text: "DOI"
+      link_url: "https://doi.org/10.1186/s12909-023-04589-3"
+    - year: "2020"
+      title: "A systematic review of mobile game-based learning in STEM education"
+      authors: "Gao, F., Li, L., &amp; Sun, Y."
+      venue: "Educational Technology Research &amp; Development"
+      details: "68, 1791–1827"
+      link_text: ""
+      link_url: ""
+  # The line under the list. HTML ok.
+  footnote: >-
+    A full list is available on
+    <a href="https://scholar.google.com/citations?user=ddWcpbgAAAAJ&amp;hl=en">Google Scholar</a>.

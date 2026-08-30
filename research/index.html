@@ -1,0 +1,41 @@
+---
+layout: default
+title: Research
+permalink: /research/
+---
+{% assign research = site.data.research %}
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">{{ research.page.eyebrow }}</p>
+    <h2>{{ research.page.heading }}</h2>
+    <p class="research-summary-copy">{{ research.page.intro }}</p>
+  </div>
+  <div class="topic-grid">
+    {% for area in research.areas %}
+    <article class="topic-card">
+      <span class="topic-num">{{ area.number }}</span>
+      <h3>{{ area.title }}</h3>
+      <p>{{ area.text }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">{{ research.publications.eyebrow }}</p>
+    <h2>{{ research.publications.heading }}</h2>
+  </div>
+  <ol class="pub-list">
+    {% for pub in research.publications.items %}
+    <li class="pub">
+      <span class="pub-year">{{ pub.year }}</span>
+      <div>
+        <p class="pub-title">{{ pub.title }}</p>
+        <p class="pub-venue">{{ pub.authors }} · <em>{{ pub.venue }}</em>{% if pub.details != "" %}, {{ pub.details }}{% endif %}{% if pub.link_url != "" %} · <a href="{{ pub.link_url }}">{{ pub.link_text }}</a>{% endif %}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+  <p class="pub-more">{{ research.publications.footnote }}</p>
+</section>

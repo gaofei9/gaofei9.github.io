@@ -1,5 +1,5 @@
 ---
-# Front matter makes Jekyll process this file, so the recent-posts loop below runs.
+# Front matter makes Jekyll process this file.
 # All homepage TEXT lives in _data/home.yml. Edit that file, not this one.
 ---
 {% assign home = site.data.home %}
@@ -22,9 +22,8 @@
     <a class="wordmark" href="#top">FEI&nbsp;GAO</a>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
       <a href="blog/">Blog</a>
+      <a href="research/">Research</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </div>
   </nav>
@@ -62,6 +61,22 @@
   </header>
 
   <main>
+    <section class="section" id="write-about">
+      <div class="section-head">
+        <p class="eyebrow">{{ home.write_about.eyebrow }}</p>
+        <h2>{{ home.write_about.heading }}</h2>
+      </div>
+      <div class="topic-grid">
+        {% for area in home.write_about.areas %}
+        <article class="topic-card">
+          <span class="topic-num">{{ area.number }}</span>
+          <h3>{{ area.title }}</h3>
+          <p>{{ area.text }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
     <section class="section" id="about">
       <div class="section-head">
         <p class="eyebrow">{{ home.about.eyebrow }}</p>
@@ -79,41 +94,6 @@
           {% endfor %}
         </div>
       </div>
-    </section>
-
-    <section class="section" id="research">
-      <div class="section-head">
-        <p class="eyebrow">{{ home.research.eyebrow }}</p>
-        <h2>{{ home.research.heading }}</h2>
-      </div>
-      <div class="topic-grid">
-        {% for area in home.research.areas %}
-        <article class="topic-card">
-          <span class="topic-num">{{ area.number }}</span>
-          <h3>{{ area.title }}</h3>
-          <p>{{ area.text }}</p>
-        </article>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section class="section" id="publications">
-      <div class="section-head">
-        <p class="eyebrow">{{ home.publications.eyebrow }}</p>
-        <h2>{{ home.publications.heading }}</h2>
-      </div>
-      <ol class="pub-list">
-        {% for pub in home.publications.items %}
-        <li class="pub">
-          <span class="pub-year">{{ pub.year }}</span>
-          <div>
-            <p class="pub-title">{{ pub.title }}</p>
-            <p class="pub-venue">{{ pub.authors }} · <em>{{ pub.venue }}</em>{% if pub.details != "" %}, {{ pub.details }}{% endif %}{% if pub.link_url != "" %} · <a href="{{ pub.link_url }}">{{ pub.link_text }}</a>{% endif %}</p>
-          </div>
-        </li>
-        {% endfor %}
-      </ol>
-      <p class="pub-more">{{ home.publications.footnote }}</p>
     </section>
 
     <section class="section" id="recent-posts">
@@ -142,6 +122,26 @@
         {% endfor %}
       </ol>
       <p class="pub-more"><a href="blog/">{{ home.blog.all_posts_text }}</a></p>
+    </section>
+
+    <section class="section" id="research">
+      <div class="section-head">
+        <p class="eyebrow">{{ home.research_summary.eyebrow }}</p>
+        <h2>{{ home.research_summary.heading }}</h2>
+      </div>
+      <p class="research-summary-copy">{{ home.research_summary.copy }}</p>
+      <ol class="pub-list">
+        {% for pub in site.data.research.publications.items limit: 3 %}
+        <li class="pub">
+          <span class="pub-year">{{ pub.year }}</span>
+          <div>
+            <p class="pub-title">{{ pub.title }}</p>
+            <p class="pub-venue">{{ pub.authors }} · <em>{{ pub.venue }}</em>{% if pub.details != "" %}, {{ pub.details }}{% endif %}{% if pub.link_url != "" %} · <a href="{{ pub.link_url }}">{{ pub.link_text }}</a>{% endif %}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+      <p class="pub-more"><a href="research/">{{ home.research_summary.link_text }}</a></p>
     </section>
 
     {% include newsletter.html %}
