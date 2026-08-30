@@ -28,7 +28,7 @@ hero:
     I am a learning scientist who studies how people learn in online environments
     and how the design of those environments shapes their motivation,
     participation, and learning. My work brings together learning analytics and
-    motivation research to design environments that support students' autonomy,
+    motivation research to design environments that support learners' autonomy,
     competence, and capacity for self-regulated learning.
   portrait_alt: "Fei Gao"
   primary_button:
@@ -80,33 +80,33 @@ about:
 # ---------- Research ----------
 research:
   eyebrow: "Research"
-  heading: "What I work on"
+  heading: "Designing data-informed and motivating learning environments"
   # One entry per card. The number is just the label shown on the card.
   areas:
     - number: "I"
-      title: "Learning analytics"
+      title: "Learning analytics and self-regulated learning"
       text: >-
-        I look for patterns in what students do in online courses, and I
-        design dashboards that show students their own progress in a form
-        they can act on.
+        I identify patterns in students' online learning behaviors and design
+        actionable dashboards that help them monitor their progress, reflect
+        on their learning, and regulate their learning strategies.
     - number: "II"
-      title: "Gamification and simulation"
+      title: "Gamification, simulation, and immersive learning"
       text: >-
-        I study how game elements such as leaderboards, and simulations such
-        as virtual reality, change what students learn and how much they want
-        to keep going.
+        I investigate how gamified and simulated learning environments,
+        including leaderboards and virtual reality, influence students'
+        motivation, engagement, participation, and learning outcomes.
     - number: "III"
-      title: "Motivation and affect in online learning"
+      title: "Motivation and emotion in online learning"
       text: >-
-        I examine how online courses meet students' needs for autonomy,
-        competence, and relatedness, and how the emotions students feel while
-        working shape what they learn.
+        I examine how motivational beliefs and emotional experiences shape
+        students' engagement, participation, persistence, learning strategies,
+        and academic outcomes in online environments.
     - number: "IV"
-      title: "AI in education"
+      title: "Artificial intelligence in education"
       text: >-
-        I investigate how students and instructors use AI tools, including the
-        differences in how various groups take them up and what they think of
-        them.
+        I investigate how students and instructors perceive, adopt, and use
+        artificial intelligence in educational settings, with attention to
+        variation across learner and instructor populations.
 
 
 # ---------- Publications ----------
