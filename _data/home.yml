@@ -72,27 +72,27 @@ write_about:
     - number: "I"                     # tag: science-of-learning
       title: "Science of learning"
       text: >-
-        How learning works: memory, attention, and how brains change with
-        practice. I read the research, mine and others', and write about
-        what it means for everyday learning.
+        How learning works: memory, attention, and how the brain changes
+        with practice. I draw on my own research and the work of others to
+        explore what the science means for everyday learning.
     - number: "II"                    # tag: motivation
       title: "Motivation"
       text: >-
-        Why we start, why we quit, and what keeps us going. Motivation is my
-        research home ground, and I write about how to put it to work in
-        your own learning.
+        Why we start, why we quit, and what keeps us going. Motivation is
+        at the heart of my research, and I write about what the science
+        tells us and how to put it to work in your own learning.
     - number: "III"                   # tag: tools
       title: "Tools & techniques"
       text: >-
         Mnemonics, spaced practice, retrieval, and other techniques with
         evidence behind them. What they are, when they help, and how to
-        try them.
+        put them into practice.
     - number: "IV"                    # tag: books
-      title: "Ideas from books"
+      title: "Books"
       text: >-
-        Notes on books about learning, from Ultralearning to The Art of
-        Learning. What each book claims, and how it squares with the
-        research.
+        Notes on books about learning: the ideas each book puts forward,
+        the research behind them, and where the evidence agrees or
+        pushes back.
 
 
 # ---------- About ----------
