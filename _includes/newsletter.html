@@ -1,11 +1,10 @@
 <section class="section">
   <div class="newsletter">
     <div>
-      <p class="eyebrow">Newsletter</p>
-      <h2>Get new posts by email</h2>
+      <p class="eyebrow">{{ site.data.home.newsletter.eyebrow }}</p>
+      <h2>{{ site.data.home.newsletter.heading }}</h2>
       <p class="newsletter-copy">
-        A short email whenever I publish something new. No spam, and you can
-        unsubscribe at any time.
+        {{ site.data.home.newsletter.copy }}
       </p>
     </div>
     <form class="newsletter-form"
@@ -14,7 +13,7 @@
       <label class="visually-hidden" for="bd-email">Email address</label>
       <input type="email" name="email" id="bd-email" required
              placeholder="you@example.com" autocomplete="email">
-      <button type="submit" class="btn btn-rose">Subscribe</button>
+      <button type="submit" class="btn btn-rose">{{ site.data.home.newsletter.button_text }}</button>
     </form>
   </div>
 </section>
