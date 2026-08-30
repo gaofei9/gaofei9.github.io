@@ -209,11 +209,15 @@
           <p class="eyebrow">Contact</p>
           <h2>Stay in touch</h2>
           <p class="contact-copy">
-            For collaboration, speaking, or inquiries, email is the
-            best way to reach me.
+            For collaboration, speaking, or inquiries, send me a message and
+            I will get back to you.
           </p>
         </div>
-        <a class="btn btn-rose" href="mailto:gaof@bgsu.edu">Email me</a>
+        {% if site.contact_form_url != "" %}
+        <a class="btn btn-rose" href="{{ site.contact_form_url }}">Send me a message</a>
+        {% else %}
+        <a class="btn btn-rose" href="https://www.bgsu.edu/technology-architecture-and-applied-engineering/about-the-college/faculty-and-staff-directory/fei-gao.html">Contact me at BGSU</a>
+        {% endif %}
       </div>
     </section>
   </main>
