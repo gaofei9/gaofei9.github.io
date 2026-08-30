@@ -25,9 +25,11 @@ hero:
   eyebrow: "Professor of Instructional Design and Technology"
   name: "Fei Gao"
   lede: >-
-    I am a learning scientist who studies how people learn online, and how the design of learning environments shape what students do and how well they do it. My work brings
-    together learning analytics and research on motivation to build
-    environments that help students direct their own learning.
+    I am a learning scientist who studies how people learn in online environments
+    and how the design of those environments shapes their motivation,
+    participation, and learning. My work brings together learning analytics and
+    motivation research to design environments that support students' autonomy,
+    competence, and capacity for self-regulated learning.
   portrait_alt: "Fei Gao"
   primary_button:
     text: "Explore my research"
@@ -42,7 +44,7 @@ credentials:
   - label: "Affiliation"
     value: "Bowling Green State University"
   - label: "Focus"
-    value: "Learning analytics, gamification, online learning"
+    value: "Learning analytics, gamification & simulation, online learning"
   - label: "Recognition"
     value: "Stanford/Elsevier Top 2% Scientists, 2025"
 
@@ -65,14 +67,12 @@ about:
       University, and I have studied online learning environments
       since then.
     - >-
-      My recent work looks at how students manage their own learning in
-      online STEM courses. With funding from the National Science
-      Foundation, I led CLAIM-STEM, a project that helped undergraduates
+      My recent work looks at how students learn in
+      online STEM platforms. With funding from the National Science
+      Foundation, I led a project that helped undergraduates
       build the math skills they need for STEM programs. I am now
-      studying how leaderboards and other game elements change what
-      students do and how they feel about it, and how a learning
-      analytics dashboard can show students something useful about their
-      own progress. I serve as Associate Editor for
+      studying how leaderboards and other game elements change students' motivation, participation, and learning, and how a learning
+      analytics dashboard can support self-regulated learning. I serve as Associate Editor for
       <em>Educational Technology &amp; Society</em> and the
       <em>Online Learning Journal</em>.
 
