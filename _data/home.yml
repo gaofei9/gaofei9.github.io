@@ -26,12 +26,23 @@ meta_description: >-
 hero:
   eyebrow: "Learning scientist · Lifelong learner"
   name: "Fei Gao"
-  lede: >-
-    I study learning for a living, and I practice what I have learned about learning every day. I write
-    about what helps people learn: the research on motivation and learning
-    environments, the neuroscience of how brains change, and the tools and
-    books that hold up when you try them. I invite you to be a scientist too,
-    and experiment with your own learning.
+  # One entry per paragraph.
+  lede_paragraphs:
+    - >-
+      How can we cultivate the desire to learn, and how can we learn better?
+      I chase these questions in my research, and I put what I discover into
+      practice every day.
+    - >-
+      I write about what helps people learn: the science of motivation, the
+      environments that support learning, the neuroscience of how our brains
+      change, and the evidence-based tools and strategies that can make
+      learning more effective.
+    - >-
+      As a learning scientist, I also treat my own learning as an ongoing
+      experiment. I try things, pay attention to what works, revise what
+      does not, and keep learning from the process. I invite you to do the
+      same: become a scientist of your own learning, and experiment with
+      how you learn best.
   portrait_alt: "Fei Gao"
   primary_button:
     text: "Read the blog"

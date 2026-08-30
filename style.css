@@ -134,6 +134,8 @@ a:focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; border-
   max-width: 34rem;
   margin-bottom: 2rem;
 }
+.lede p { margin: 0 0 1rem; }
+.lede p:last-child { margin-bottom: 0; }
 
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; }
 

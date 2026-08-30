@@ -33,9 +33,11 @@
       <div class="hero-text">
         <p class="eyebrow">{{ home.hero.eyebrow }}</p>
         <h1>{{ home.hero.name }}</h1>
-        <p class="lede">
-          {{ home.hero.lede }}
-        </p>
+        <div class="lede">
+          {% for paragraph in home.hero.lede_paragraphs %}
+          <p>{{ paragraph }}</p>
+          {% endfor %}
+        </div>
         <div class="hero-actions">
           <a class="btn btn-rose" href="{{ home.hero.primary_button.link }}">{{ home.hero.primary_button.text }}</a>
           <a class="btn btn-ghost" href="{{ home.hero.secondary_button.link }}">{{ home.hero.secondary_button.text }}</a>
