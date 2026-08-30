@@ -1,3 +1,6 @@
+---
+# Front matter makes Jekyll process this file, so the recent-posts loop below runs.
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,6 +165,34 @@
         </li>
       </ol>
       <p class="pub-more">A full list is available on <a href="https://scholar.google.com/citations?user=ddWcpbgAAAAJ&amp;hl=en">Google Scholar</a>.</p>
+    </section>
+
+    <section class="section" id="recent-posts">
+      <div class="section-head">
+        <p class="eyebrow">Blog</p>
+        <h2>Recent posts</h2>
+      </div>
+      <ol class="pub-list">
+        {% for post in site.posts limit: 5 %}
+        <li class="pub">
+          <span class="pub-year">{{ post.date | date: "%Y" }}</span>
+          <div>
+            <p class="pub-title"><a href="{{ post.url }}">{{ post.title }}</a></p>
+            <p class="pub-venue">
+              {{ post.date | date: "%B %-d, %Y" }}
+              {% if post.tags.size > 0 %}
+              ·
+              {% for tag in post.tags %}
+              {% assign tag_slug = tag | slugify %}
+              <a class="tag-chip" href="/tag/{{ tag_slug }}/">{{ tag }}</a>
+              {% endfor %}
+              {% endif %}
+            </p>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+      <p class="pub-more"><a href="blog/">All posts →</a></p>
     </section>
 
     <section class="section" id="contact">
