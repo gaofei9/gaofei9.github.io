@@ -9,6 +9,9 @@ Gao_CV_updated.docx
 # Design reference image (Canva template), not published
 Blush Bronze Website Launch Promo Instagram Post.png
 
+# Full-size photo source. The site serves the optimized copies in images/.
+/Gao_2022.jpg
+
 # Jekyll build output, if a local build is ever run
 _site/
 .jekyll-cache/
