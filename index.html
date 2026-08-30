@@ -1,18 +1,20 @@
 ---
 # Front matter makes Jekyll process this file, so the recent-posts loop below runs.
+# All homepage TEXT lives in _data/home.yml. Edit that file, not this one.
 ---
+{% assign home = site.data.home %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fei Gao</title>
-  <meta name="description" content="Fei Gao, Professor of Instructional Design and Technology at Bowling Green State University. Research on learning analytics, gamification, and motivation in online learning.">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ home.meta_description }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Schibsted+Grotesk:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="style.css">
-  <link rel="alternate" type="application/atom+xml" title="Fei Gao" href="/feed.xml">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
 </head>
 <body>
 
@@ -30,17 +32,14 @@
   <header class="hero" id="top">
     <div class="hero-inner">
       <div class="hero-text">
-        <p class="eyebrow">Professor of Instructional Design and Technology</p>
-        <h1>Fei Gao</h1>
+        <p class="eyebrow">{{ home.hero.eyebrow }}</p>
+        <h1>{{ home.hero.name }}</h1>
         <p class="lede">
-          I study how people learn online, and how the design of a course or a
-          tool shapes what students do and how well they do it. My work brings
-          together learning analytics and research on motivation to build
-          environments that help students direct their own learning.
+          {{ home.hero.lede }}
         </p>
         <div class="hero-actions">
-          <a class="btn btn-rose" href="#research">Explore my research</a>
-          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          <a class="btn btn-rose" href="{{ home.hero.primary_button.link }}">{{ home.hero.primary_button.text }}</a>
+          <a class="btn btn-ghost" href="{{ home.hero.secondary_button.link }}">{{ home.hero.secondary_button.text }}</a>
         </div>
       </div>
       <div class="portrait">
@@ -50,133 +49,77 @@
           <img src="images/portrait.jpg"
                srcset="images/portrait.jpg 1x, images/portrait@2x.jpg 2x"
                width="384" height="480"
-               alt="Fei Gao"
+               alt="{{ home.hero.portrait_alt }}"
                fetchpriority="high" decoding="async">
         </picture>
       </div>
     </div>
     <div class="cred-strip">
-      <div class="cred"><span class="cred-label">Affiliation</span><span class="cred-value">Bowling Green State University</span></div>
-      <div class="cred"><span class="cred-label">Focus</span><span class="cred-value">Learning analytics, gamification, online learning</span></div>
-      <div class="cred"><span class="cred-label">Recognition</span><span class="cred-value">Stanford/Elsevier Top 2% Scientists, 2025</span></div>
+      {% for cred in home.credentials %}
+      <div class="cred"><span class="cred-label">{{ cred.label }}</span><span class="cred-value">{{ cred.value }}</span></div>
+      {% endfor %}
     </div>
   </header>
 
   <main>
     <section class="section" id="about">
       <div class="section-head">
-        <p class="eyebrow">About</p>
-        <h2>A little background</h2>
+        <p class="eyebrow">{{ home.about.eyebrow }}</p>
+        <h2>{{ home.about.heading }}</h2>
       </div>
       <div class="about-grid">
         <p class="about-pull">
-          Technology improves learning when it meets students' needs for
-          autonomy, competence, and relatedness. The design is what makes
-          the difference.
+          {{ home.about.pull_quote }}
         </p>
         <div class="about-body">
+          {% for paragraph in home.about.paragraphs %}
           <p>
-            I am a Professor in Instructional Design and Technology at Bowling
-            Green State University, where I also serve as Associate Dean for
-            Faculty Affairs and Research. I earned my Ph.D. in Educational
-            Psychology and Educational Technology from Michigan State
-            University, and I have studied online learning environments
-            since then.
+            {{ paragraph }}
           </p>
-          <p>
-            My recent work looks at how students manage their own learning in
-            online STEM courses. With funding from the National Science
-            Foundation, I led CLAIM-STEM, a project that helped undergraduates
-            build the math skills they need for STEM programs. I am now
-            studying how leaderboards and other game elements change what
-            students do and how they feel about it, and how a learning
-            analytics dashboard can show students something useful about their
-            own progress. I serve as Associate Editor for
-            <em>Educational Technology &amp; Society</em> and the
-            <em>Online Learning Journal</em>.
-          </p>
+          {% endfor %}
         </div>
       </div>
     </section>
 
     <section class="section" id="research">
       <div class="section-head">
-        <p class="eyebrow">Research</p>
-        <h2>What I work on</h2>
+        <p class="eyebrow">{{ home.research.eyebrow }}</p>
+        <h2>{{ home.research.heading }}</h2>
       </div>
       <div class="topic-grid">
+        {% for area in home.research.areas %}
         <article class="topic-card">
-          <span class="topic-num">I</span>
-          <h3>Learning analytics</h3>
-          <p>I look for patterns in what students do in online courses, and I design dashboards that show students their own progress in a form they can act on.</p>
+          <span class="topic-num">{{ area.number }}</span>
+          <h3>{{ area.title }}</h3>
+          <p>{{ area.text }}</p>
         </article>
-        <article class="topic-card">
-          <span class="topic-num">II</span>
-          <h3>Gamification and simulation</h3>
-          <p>I study how game elements such as leaderboards, and simulations such as virtual reality, change what students learn and how much they want to keep going.</p>
-        </article>
-        <article class="topic-card">
-          <span class="topic-num">III</span>
-          <h3>Motivation and affect in online learning</h3>
-          <p>I examine how online courses meet students' needs for autonomy, competence, and relatedness, and how the emotions students feel while working shape what they learn.</p>
-        </article>
-        <article class="topic-card">
-          <span class="topic-num">IV</span>
-          <h3>AI in education</h3>
-          <p>I investigate how students and instructors use AI tools, including the differences in how various groups take them up and what they think of them.</p>
-        </article>
+        {% endfor %}
       </div>
     </section>
 
     <section class="section" id="publications">
       <div class="section-head">
-        <p class="eyebrow">Publications</p>
-        <h2>Selected work</h2>
+        <p class="eyebrow">{{ home.publications.eyebrow }}</p>
+        <h2>{{ home.publications.heading }}</h2>
       </div>
       <ol class="pub-list">
+        {% for pub in home.publications.items %}
         <li class="pub">
-          <span class="pub-year">2026</span>
+          <span class="pub-year">{{ pub.year }}</span>
           <div>
-            <p class="pub-title">Examining the role of personality traits and perceived need satisfaction in gamified learning</p>
-            <p class="pub-venue">Gao, F., Liu, J., Rogers, K., Li, L., &amp; Liu, R. · <em>Knowledge Management &amp; E-Learning</em></p>
+            <p class="pub-title">{{ pub.title }}</p>
+            <p class="pub-venue">{{ pub.authors }} · <em>{{ pub.venue }}</em>{% if pub.details != "" %}, {{ pub.details }}{% endif %}{% if pub.link_url != "" %} · <a href="{{ pub.link_url }}">{{ pub.link_text }}</a>{% endif %}</p>
           </div>
         </li>
-        <li class="pub">
-          <span class="pub-year">2025</span>
-          <div>
-            <p class="pub-title">Towards tailored online learning: Predicting students' online learning patterns with perceived needs satisfaction</p>
-            <p class="pub-venue">Gao, F., &amp; Liu, R. · <em>Educational Technology and Society</em>, 28(2), 1–14 · <a href="https://www.jstor.org/stable/48827974">JSTOR</a></p>
-          </div>
-        </li>
-        <li class="pub">
-          <span class="pub-year">2024</span>
-          <div>
-            <p class="pub-title">Advancing gamification research and practice with three underexplored ideas in self-determination theory</p>
-            <p class="pub-venue">Gao, F. · <em>TechTrends</em>, 68, 661–671 · <a href="https://doi.org/10.1007/s11528-024-00968-9">DOI</a></p>
-          </div>
-        </li>
-        <li class="pub">
-          <span class="pub-year">2023</span>
-          <div>
-            <p class="pub-title">Effects of virtual reality simulation on medical students' learning and motivation in human parasitology instruction</p>
-            <p class="pub-venue">Gao, F., Qiu, J., Chen, L., Li, L., Ji, M., &amp; Zhang, R. · <em>BMC Medical Education</em>, 23, 630 · <a href="https://doi.org/10.1186/s12909-023-04589-3">DOI</a></p>
-          </div>
-        </li>
-        <li class="pub">
-          <span class="pub-year">2020</span>
-          <div>
-            <p class="pub-title">A systematic review of mobile game-based learning in STEM education</p>
-            <p class="pub-venue">Gao, F., Li, L., &amp; Sun, Y. · <em>Educational Technology Research &amp; Development</em>, 68, 1791–1827</p>
-          </div>
-        </li>
+        {% endfor %}
       </ol>
-      <p class="pub-more">A full list is available on <a href="https://scholar.google.com/citations?user=ddWcpbgAAAAJ&amp;hl=en">Google Scholar</a>.</p>
+      <p class="pub-more">{{ home.publications.footnote }}</p>
     </section>
 
     <section class="section" id="recent-posts">
       <div class="section-head">
-        <p class="eyebrow">Blog</p>
-        <h2>Recent posts</h2>
+        <p class="eyebrow">{{ home.blog.eyebrow }}</p>
+        <h2>{{ home.blog.heading }}</h2>
       </div>
       <ol class="pub-list">
         {% for post in site.posts limit: 5 %}
@@ -198,7 +141,7 @@
         </li>
         {% endfor %}
       </ol>
-      <p class="pub-more"><a href="blog/">All posts →</a></p>
+      <p class="pub-more"><a href="blog/">{{ home.blog.all_posts_text }}</a></p>
     </section>
 
     {% include newsletter.html %}
@@ -206,27 +149,25 @@
     <section class="section" id="contact">
       <div class="contact-band">
         <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Stay in touch</h2>
+          <p class="eyebrow">{{ home.contact.eyebrow }}</p>
+          <h2>{{ home.contact.heading }}</h2>
           <p class="contact-copy">
-            For collaboration, speaking, or inquiries, send me a message and
-            I will get back to you.
+            {{ home.contact.copy }}
           </p>
         </div>
         {% if site.contact_form_url != "" %}
-        <a class="btn btn-rose" href="{{ site.contact_form_url }}">Send me a message</a>
+        <a class="btn btn-rose" href="{{ site.contact_form_url }}">{{ home.contact.button_text }}</a>
         {% else %}
-        <a class="btn btn-rose" href="https://www.bgsu.edu/technology-architecture-and-applied-engineering/about-the-college/faculty-and-staff-directory/fei-gao.html">Contact me at BGSU</a>
+        <a class="btn btn-rose" href="{{ home.contact.fallback_url }}">{{ home.contact.fallback_button_text }}</a>
         {% endif %}
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <span>© 2026 Fei Gao</span>
+    <span>{{ home.footer.copyright }}</span>
     <span>
-      <a href="https://scholar.google.com/citations?user=ddWcpbgAAAAJ&amp;hl=en">Google Scholar</a> ·
-      <a href="https://www.linkedin.com/in/gaofei/">LinkedIn</a>
+      {% for link in home.footer.links %}<a href="{{ link.url }}">{{ link.text }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}
     </span>
   </footer>
 

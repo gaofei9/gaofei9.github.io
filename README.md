@@ -11,8 +11,19 @@ The blog pages share the same stylesheet.
 
 ## How to edit
 
-Open the folder in VS Code and edit `index.html`. To swap your photo,
-replace the files in `images/`, keeping the same names.
+**All homepage text lives in `_data/home.yml`.** Open that file and edit
+the text to the right of each colon: the headline, the about paragraphs,
+the research cards, the publication list, the contact wording. It is a
+plain text file, so there is no HTML to break, and the file itself
+explains the few rules at the top.
+
+`index.html` holds only the layout, and reads the text from that file.
+Edit it when you want to move or restyle a section, not to change wording.
+
+To swap your photo, replace the files in `images/`, keeping the same names.
+
+Nothing goes live until you commit and push. Saving alone does not
+publish, because Nextcloud sync and GitHub are separate things.
 
 ## The blog
 

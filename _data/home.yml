@@ -1,0 +1,188 @@
+# ===========================================================
+# HOMEPAGE TEXT
+#
+# Everything you can see on the homepage is written here.
+# Edit the text to the RIGHT of each colon. Leave the labels
+# on the LEFT alone, and keep the indentation as it is.
+#
+# Plain text is fine, including & and quotation marks.
+# Where a line is marked "HTML ok", you may also use simple
+# tags like <em>italics</em> and links.
+#
+# To publish a change: save, then commit and push.
+# The live site updates a minute or two later.
+# ===========================================================
+
+# Shown in search results and when the page is shared.
+meta_description: >-
+  Fei Gao, Professor of Instructional Design and Technology at Bowling Green
+  State University. Research on learning analytics, gamification, and
+  motivation in online learning.
+
+
+# ---------- Top of the page ----------
+hero:
+  eyebrow: "Professor of Instructional Design and Technology"
+  name: "Fei Gao"
+  lede: >-
+    I study how people learn online, and how the design of a course or a
+    tool shapes what students do and how well they do it. My work brings
+    together learning analytics and research on motivation to build
+    environments that help students direct their own learning.
+  portrait_alt: "Fei Gao"
+  primary_button:
+    text: "Explore my research"
+    link: "#research"
+  secondary_button:
+    text: "Get in touch"
+    link: "#contact"
+
+# The three facts in the strip under the photo.
+# Add or remove entries freely; each needs a label and a value.
+credentials:
+  - label: "Affiliation"
+    value: "Bowling Green State University"
+  - label: "Focus"
+    value: "Learning analytics, gamification, online learning"
+  - label: "Recognition"
+    value: "Stanford/Elsevier Top 2% Scientists, 2025"
+
+
+# ---------- About ----------
+about:
+  eyebrow: "About"
+  heading: "A little background"
+  pull_quote: >-
+    Technology improves learning when it meets students' needs for
+    autonomy, competence, and relatedness. The design is what makes
+    the difference.
+  # One entry per paragraph. HTML ok.
+  paragraphs:
+    - >-
+      I am a Professor in Instructional Design and Technology at Bowling
+      Green State University, where I also serve as Associate Dean for
+      Faculty Affairs and Research. I earned my Ph.D. in Educational
+      Psychology and Educational Technology from Michigan State
+      University, and I have studied online learning environments
+      since then.
+    - >-
+      My recent work looks at how students manage their own learning in
+      online STEM courses. With funding from the National Science
+      Foundation, I led CLAIM-STEM, a project that helped undergraduates
+      build the math skills they need for STEM programs. I am now
+      studying how leaderboards and other game elements change what
+      students do and how they feel about it, and how a learning
+      analytics dashboard can show students something useful about their
+      own progress. I serve as Associate Editor for
+      <em>Educational Technology &amp; Society</em> and the
+      <em>Online Learning Journal</em>.
+
+
+# ---------- Research ----------
+research:
+  eyebrow: "Research"
+  heading: "What I work on"
+  # One entry per card. The number is just the label shown on the card.
+  areas:
+    - number: "I"
+      title: "Learning analytics"
+      text: >-
+        I look for patterns in what students do in online courses, and I
+        design dashboards that show students their own progress in a form
+        they can act on.
+    - number: "II"
+      title: "Gamification and simulation"
+      text: >-
+        I study how game elements such as leaderboards, and simulations such
+        as virtual reality, change what students learn and how much they want
+        to keep going.
+    - number: "III"
+      title: "Motivation and affect in online learning"
+      text: >-
+        I examine how online courses meet students' needs for autonomy,
+        competence, and relatedness, and how the emotions students feel while
+        working shape what they learn.
+    - number: "IV"
+      title: "AI in education"
+      text: >-
+        I investigate how students and instructors use AI tools, including the
+        differences in how various groups take them up and what they think of
+        them.
+
+
+# ---------- Publications ----------
+publications:
+  eyebrow: "Publications"
+  heading: "Selected work"
+  # One entry per publication, newest first.
+  # Leave details, link_text, or link_url empty ("") to hide them.
+  items:
+    - year: "2026"
+      title: "Examining the role of personality traits and perceived need satisfaction in gamified learning"
+      authors: "Gao, F., Liu, J., Rogers, K., Li, L., &amp; Liu, R."
+      venue: "Knowledge Management &amp; E-Learning"
+      details: ""
+      link_text: ""
+      link_url: ""
+    - year: "2025"
+      title: "Towards tailored online learning: Predicting students' online learning patterns with perceived needs satisfaction"
+      authors: "Gao, F., &amp; Liu, R."
+      venue: "Educational Technology and Society"
+      details: "28(2), 1–14"
+      link_text: "JSTOR"
+      link_url: "https://www.jstor.org/stable/48827974"
+    - year: "2024"
+      title: "Advancing gamification research and practice with three underexplored ideas in self-determination theory"
+      authors: "Gao, F."
+      venue: "TechTrends"
+      details: "68, 661–671"
+      link_text: "DOI"
+      link_url: "https://doi.org/10.1007/s11528-024-00968-9"
+    - year: "2023"
+      title: "Effects of virtual reality simulation on medical students' learning and motivation in human parasitology instruction"
+      authors: "Gao, F., Qiu, J., Chen, L., Li, L., Ji, M., &amp; Zhang, R."
+      venue: "BMC Medical Education"
+      details: "23, 630"
+      link_text: "DOI"
+      link_url: "https://doi.org/10.1186/s12909-023-04589-3"
+    - year: "2020"
+      title: "A systematic review of mobile game-based learning in STEM education"
+      authors: "Gao, F., Li, L., &amp; Sun, Y."
+      venue: "Educational Technology Research &amp; Development"
+      details: "68, 1791–1827"
+      link_text: ""
+      link_url: ""
+  # The line under the list. HTML ok.
+  footnote: >-
+    A full list is available on
+    <a href="https://scholar.google.com/citations?user=ddWcpbgAAAAJ&amp;hl=en">Google Scholar</a>.
+
+
+# ---------- Blog section on the homepage ----------
+# The posts themselves come from the _posts folder automatically.
+blog:
+  eyebrow: "Blog"
+  heading: "Recent posts"
+  all_posts_text: "All posts →"
+
+
+# ---------- Contact ----------
+contact:
+  eyebrow: "Contact"
+  heading: "Stay in touch"
+  copy: >-
+    For collaboration, speaking, or inquiries, send me a message and
+    I will get back to you.
+  button_text: "Send me a message"
+  fallback_button_text: "Contact me at BGSU"
+  fallback_url: "https://www.bgsu.edu/technology-architecture-and-applied-engineering/about-the-college/faculty-and-staff-directory/fei-gao.html"
+
+
+# ---------- Footer ----------
+footer:
+  copyright: "© 2026 Fei Gao"
+  links:
+    - text: "Google Scholar"
+      url: "https://scholar.google.com/citations?user=ddWcpbgAAAAJ&amp;hl=en"
+    - text: "LinkedIn"
+      url: "https://www.linkedin.com/in/gaofei/"
