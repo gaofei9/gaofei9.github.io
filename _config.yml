@@ -8,7 +8,7 @@ permalink: /blog/:year/:title/
 # Paste the share link of your contact form here (Google Forms, Microsoft
 # Forms, Tally). While this is empty, the Contact button points at your BGSU
 # faculty page instead, so it always works.
-contact_form_url: ""
+contact_form_url: "https://forms.gle/q5zs7wFNqtq1AQmf8"
 
 plugins:
   - jekyll-feed
