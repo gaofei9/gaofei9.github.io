@@ -125,12 +125,13 @@ about:
 # the publication list in that file.
 research_summary:
   eyebrow: "Research"
-  heading: "The research behind the writing"
+  heading: "My research"
   copy: >-
-    In my research I study how the design of online learning environments
+    In my research, I study how the design of online learning environments
     shapes motivation, participation, and learning, with recent projects on
-    gamification, learning analytics dashboards, and virtual reality. A few
-    papers are below, and the research page has the full picture.
+    gamification, learning analytics dashboards, and virtual reality. 
+    You may find more information about my research and publications
+    on the <a href='/research/'>research page</a>.
   link_text: "All research and publications →"
 
 
