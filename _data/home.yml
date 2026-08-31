@@ -37,10 +37,10 @@ hero:
       and strategies that can make learning more effective.
     - >-
       As a learning scientist, I also treat my own learning as an ongoing
-      experiment. I try things, pay attention to what works, revise what
-      does not, and keep learning from the process. I invite you to do the
-      same: become a scientist of your own learning and experiment with how
-      you learn best.
+      experiment. I try different things, pay attention to what works, and
+      revise what does not. I keep learning from the process. I invite you
+      to do the same: become a scientist of your own learning and
+      experiment with how you learn best!
   portrait_alt: "Fei Gao"
   primary_button:
     text: "Read the blog"
@@ -82,15 +82,13 @@ write_about:
     - number: "III"                   # tag: tools
       title: "Tools & techniques"
       text: >-
-        Mnemonics, spaced practice, retrieval, and other techniques with
-        evidence behind them. What they are, when they help, and how to
+        Mnemonics, spaced practice, retrieval, and other techniques supported by scientific evidence. What they are, when they help, and how to
         put them into practice.
     - number: "IV"                    # tag: books
       title: "Books"
       text: >-
-        Notes on books about learning: the ideas each book puts forward,
-        the research behind them, and where the evidence agrees or
-        pushes back.
+        Notes on books about learning and learning design: the ideas in each book,
+        the research behind the ideas, and where where the evidence supports, complicates, or challenges those ideas.
 
 
 # ---------- About ----------
