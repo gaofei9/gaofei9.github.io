@@ -87,8 +87,9 @@ write_about:
     - number: "IV"                    # tag: books
       title: "Books"
       text: >-
-        Notes on books about learning and learning design: the ideas in each book,
-        the research behind the ideas, and where where the evidence supports, complicates, or challenges those ideas.
+        Notes on books about learning and learning design: the ideas in
+        each book, the research behind the ideas, and where the evidence
+        supports, complicates, or challenges those ideas.
 
 
 # ---------- About ----------
@@ -112,12 +113,10 @@ about:
     - >-
       Away from work, I am an avid reader and a constant student. I read
       widely on the science of learning, from motivation to memory to brain
-      plasticity, and I test the approaches and techniques on my own
-      learning and research projects. This site is where I reflect on my
+      plasticity. This site is where I reflect on my
       own experiences as a learner, educator, and researcher, and write
       about research worth knowing, tools worth trying, and books worth
-      reading about how we learn. I invite you to experiment with your own
-      learning alongside me.
+      reading about how we learn. 
 
 
 # ---------- Research summary on the homepage ----------
