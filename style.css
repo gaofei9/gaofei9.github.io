@@ -370,6 +370,13 @@ a:focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; border-
   color: var(--ink-muted);
   font-size: 0.85rem;
 }
+.footer-note {
+  flex-basis: 100%;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  opacity: 0.85;
+}
 
 /* ---------- Blog ---------- */
 

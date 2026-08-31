@@ -171,6 +171,7 @@
     <span>
       {% for link in home.footer.links %}<a href="{{ link.url }}">{{ link.text }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}
     </span>
+    <p class="footer-note">{{ home.footer.disclaimer }}</p>
   </footer>
 
 </body>

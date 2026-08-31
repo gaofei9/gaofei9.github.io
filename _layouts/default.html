@@ -28,8 +28,11 @@
   </main>
 
   <footer class="footer">
-    <span>© 2026 Fei Gao</span>
-    <span>Built with GitHub Pages</span>
+    <span>{{ site.data.home.footer.copyright }}</span>
+    <span>
+      {% for link in site.data.home.footer.links %}<a href="{{ link.url }}">{{ link.text }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}
+    </span>
+    <p class="footer-note">{{ site.data.home.footer.disclaimer }}</p>
   </footer>
 
 </body>
