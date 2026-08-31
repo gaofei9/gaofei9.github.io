@@ -10,12 +10,11 @@
 page:
   title: "Research"
   eyebrow: "Research"
-  heading: "Designing data-informed and motivating learning environments"
+  heading: "Data-Informed Design for Motivation and Learning"
   # Shown under the heading. HTML ok.
   intro: >-
-    I am a Professor in Instructional Design and Technology at Bowling Green
-    State University. My research examines how the design of online learning
-    environments shapes learners' motivation, participation, and learning.
+    My research examines how the design of online learning environments
+    shapes learners' motivation, participation, and learning.
 
 # One entry per card. The number is just the label shown on the card.
 areas:
