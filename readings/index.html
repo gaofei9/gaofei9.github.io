@@ -35,7 +35,11 @@ permalink: /readings/
     <ol class="readings-list">
       {% for p in group.papers %}
       <li class="reading">
-        <p class="reading-citation">{{ p.citation }}{% if p.url != "" %} <a href="{{ p.url }}">{{ p.url }}</a>{% endif %}</p>
+        <p class="reading-citation">{{ p.citation }}</p>
+        {% if p.url != "" %}
+        {% assign doi = p.url | remove: "https://doi.org/" %}
+        <a class="reading-doi" href="{{ p.url }}">doi.org/{{ doi }}</a>
+        {% endif %}
       </li>
       {% endfor %}
     </ol>
