@@ -458,19 +458,32 @@ a.tag-chip:hover { background: var(--rose); border-color: var(--rose); color: #f
   margin-bottom: 1.2rem;
 }
 
+.readings-domain-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  color: var(--ink-muted);
+  max-width: 44rem;
+}
+
 .readings-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 1rem;
 }
 
+/* APA entries: hanging indent, as in a reference list. */
 .reading { max-width: 46rem; }
-.reading-title { font-weight: 700; line-height: 1.35; margin-bottom: 0.2rem; }
-.reading-meta { color: var(--ink-muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
-.reading-note { color: var(--ink); font-size: 0.97rem; }
+.reading-citation {
+  font-size: 0.97rem;
+  line-height: 1.55;
+  padding-left: 1.6rem;
+  text-indent: -1.6rem;
+}
+.reading-citation a { word-break: break-word; }
 
 .readings-pending { opacity: 0.55; }
 

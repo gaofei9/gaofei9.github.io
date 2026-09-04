@@ -18,7 +18,15 @@ permalink: /readings/
 <section class="section readings-domain">
   <div class="section-head">
     <h2>{{ domain.name }}</h2>
-    {% if domain.intro %}<p class="research-summary-copy">{{ domain.intro }}</p>{% endif %}
+    {% if domain.intro_paragraphs %}
+    <div class="readings-domain-intro">
+      {% for paragraph in domain.intro_paragraphs %}
+      <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+    {% elsif domain.intro %}
+    <p class="research-summary-copy">{{ domain.intro }}</p>
+    {% endif %}
   </div>
 
   {% for group in domain.groups %}
@@ -27,11 +35,7 @@ permalink: /readings/
     <ol class="readings-list">
       {% for p in group.papers %}
       <li class="reading">
-        <p class="reading-title">
-          {% if p.url != "" %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
-        </p>
-        <p class="reading-meta">{{ p.authors }} ({{ p.year }}) · <em>{{ p.venue }}</em></p>
-        <p class="reading-note">{{ p.note }}</p>
+        <p class="reading-citation">{{ p.citation }}{% if p.url != "" %} <a href="{{ p.url }}">{{ p.url }}</a>{% endif %}</p>
       </li>
       {% endfor %}
     </ol>
