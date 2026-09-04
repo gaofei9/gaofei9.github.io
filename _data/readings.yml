@@ -11,11 +11,12 @@
 #
 # Each domain has a status:
 #   ready       shows its groups and papers
-#   placeholder shows only the name and a short "in progress" line
+#   placeholder shows a grayed "coming soon" chip in the
+#               category navigation (only while draft: true)
 #
-# Each paper has two lines: the APA citation (HTML ok, use
-# <em> for the journal name and volume) and the url, shown as
-# the link at the end. Leave url as "" for a work with no DOI.
+# Each paper: authors, year, title, venue, url, note.
+# The note is optional. Leave it as "" and nothing shows;
+# write a sentence and it appears under the paper.
 # ===========================================================
 
 draft: true
@@ -54,84 +55,96 @@ domains:
     groups:
       - heading: "The central tension"
         papers:
-          - citation: >-
-              Hattie, J., &amp; Timperley, H. (2007). The power of feedback.
-              <em>Review of Educational Research, 77</em>(1), 81–112.
+          - authors: "Hattie, J., & Timperley, H."
+            year: "2007"
+            title: "The Power of Feedback"
+            venue: "Review of Educational Research"
             url: "https://doi.org/10.3102/003465430298487"
-          - citation: >-
-              Kluger, A. N., &amp; DeNisi, A. (1996). The effects of feedback
-              interventions on performance: A historical review, a meta-analysis,
-              and a preliminary feedback intervention theory.
-              <em>Psychological Bulletin, 119</em>(2), 254–284.
+            note: ""
+          - authors: "Kluger, A. N., & DeNisi, A."
+            year: "1996"
+            title: "The effects of feedback interventions on performance: A historical review, a meta-analysis, and a preliminary feedback intervention theory"
+            venue: "Psychological Bulletin"
             url: "https://doi.org/10.1037/0033-2909.119.2.254"
+            note: ""
 
       - heading: "Feedback as part of assessment"
         papers:
-          - citation: >-
-              Sadler, D. R. (1989). Formative assessment and the design of
-              instructional systems. <em>Instructional Science, 18</em>(2), 119–144.
+          - authors: "Sadler, D. R."
+            year: "1989"
+            title: "Formative assessment and the design of instructional systems"
+            venue: "Instructional Science"
             url: "https://doi.org/10.1007/BF00117714"
-          - citation: >-
-              Black, P., &amp; Wiliam, D. (1998). Assessment and classroom learning.
-              <em>Assessment in Education: Principles, Policy &amp; Practice, 5</em>(1),
-              7–74.
+            note: ""
+          - authors: "Black, P., & Wiliam, D."
+            year: "1998"
+            title: "Assessment and Classroom Learning"
+            venue: "Assessment in Education: Principles, Policy & Practice"
             url: "https://doi.org/10.1080/0969595980050102"
-          - citation: >-
-              Shute, V. J. (2008). Focus on formative feedback.
-              <em>Review of Educational Research, 78</em>(1), 153–189.
+            note: ""
+          - authors: "Shute, V. J."
+            year: "2008"
+            title: "Focus on Formative Feedback"
+            venue: "Review of Educational Research"
             url: "https://doi.org/10.3102/0034654307313795"
+            note: ""
 
       - heading: "Feedback and self-regulated learning"
         papers:
-          - citation: >-
-              Butler, D. L., &amp; Winne, P. H. (1995). Feedback and self-regulated
-              learning: A theoretical synthesis.
-              <em>Review of Educational Research, 65</em>(3), 245–281.
+          - authors: "Butler, D. L., & Winne, P. H."
+            year: "1995"
+            title: "Feedback and Self-Regulated Learning: A Theoretical Synthesis"
+            venue: "Review of Educational Research"
             url: "https://doi.org/10.3102/00346543065003245"
-          - citation: >-
-              Winne, P. H., &amp; Hadwin, A. F. (1998). Studying as self-regulated
-              learning. In D. J. Hacker, J. Dunlosky, &amp; A. C. Graesser (Eds.),
-              <em>Metacognition in educational theory and practice</em> (pp. 277–304).
-              Erlbaum.
+            note: ""
+          - authors: "Winne, P. H., & Hadwin, A. F."
+            year: "1998"
+            title: "Studying as Self-Regulated Learning"
+            venue: "In Metacognition in Educational Theory and Practice (Erlbaum)"
             url: ""
-          - citation: >-
-              Nicol, D. J., &amp; Macfarlane-Dick, D. (2006). Formative assessment and
-              self-regulated learning: A model and seven principles of good feedback
-              practice. <em>Studies in Higher Education, 31</em>(2), 199–218.
+            note: ""
+          - authors: "Nicol, D. J., & Macfarlane-Dick, D."
+            year: "2006"
+            title: "Formative assessment and self-regulated learning: A model and seven principles of good feedback practice"
+            venue: "Studies in Higher Education"
             url: "https://doi.org/10.1080/03075070600572090"
+            note: ""
 
       - heading: "Feedback in digital environments"
         papers:
-          - citation: >-
-              Narciss, S. (2008). Feedback strategies for interactive learning tasks.
-              In J. M. Spector, M. D. Merrill, J. van Merriënboer, &amp; M. P. Driscoll
-              (Eds.), <em>Handbook of research on educational communications and
-              technology</em> (3rd ed., pp. 125–143). Erlbaum.
+          - authors: "Narciss, S."
+            year: "2008"
+            title: "Feedback Strategies for Interactive Learning Tasks"
+            venue: "In Handbook of Research on Educational Communications and Technology (Erlbaum)"
             url: ""
-          - citation: >-
-              van der Kleij, F. M., Feskens, R. C. W., &amp; Eggen, T. J. H. M. (2015).
-              Effects of feedback in a computer-based learning environment on students'
-              learning outcomes: A meta-analysis.
-              <em>Review of Educational Research, 85</em>(4), 475–511.
+            note: ""
+          - authors: "van der Kleij, F. M., Feskens, R. C. W., & Eggen, T. J. H. M."
+            year: "2015"
+            title: "Effects of Feedback in a Computer-Based Learning Environment on Students' Learning Outcomes: A Meta-Analysis"
+            venue: "Review of Educational Research"
             url: "https://doi.org/10.3102/0034654314564881"
+            note: ""
 
       - heading: "The recent turn: what students do with feedback"
         papers:
-          - citation: >-
-              Boud, D., &amp; Molloy, E. (2013). Rethinking models of feedback for
-              learning: The challenge of design.
-              <em>Assessment &amp; Evaluation in Higher Education, 38</em>(6), 698–712.
+          - authors: "Boud, D., & Molloy, E."
+            year: "2013"
+            title: "Rethinking models of feedback for learning: The challenge of design"
+            venue: "Assessment & Evaluation in Higher Education"
             url: "https://doi.org/10.1080/02602938.2012.691462"
-          - citation: >-
-              Carless, D., &amp; Boud, D. (2018). The development of student feedback
-              literacy: Enabling uptake of feedback.
-              <em>Assessment &amp; Evaluation in Higher Education, 43</em>(8), 1315–1325.
+            note: ""
+          - authors: "Carless, D., & Boud, D."
+            year: "2018"
+            title: "The development of student feedback literacy: Enabling uptake of feedback"
+            venue: "Assessment & Evaluation in Higher Education"
             url: "https://doi.org/10.1080/02602938.2018.1463354"
-          - citation: >-
-              Wisniewski, B., Zierer, K., &amp; Hattie, J. (2020). The power of feedback
-              revisited: A meta-analysis of educational feedback research.
-              <em>Frontiers in Psychology, 10</em>, 3087.
+            note: ""
+          - authors: "Wisniewski, B., Zierer, K., & Hattie, J."
+            year: "2020"
+            title: "The Power of Feedback Revisited: A Meta-Analysis of Educational Feedback Research"
+            venue: "Frontiers in Psychology"
             url: "https://doi.org/10.3389/fpsyg.2019.03087"
+            note: ""
 
   # ---------------------------------------------------------
   - name: "Motivation"

@@ -4,7 +4,7 @@ title: Key readings
 permalink: /readings/
 ---
 {% assign r = site.data.readings %}
-<section class="section">
+<section class="section readings-hero">
   <div class="section-head">
     <p class="eyebrow">{{ r.page.eyebrow }}</p>
     <h2>{{ r.page.heading }}</h2>
@@ -13,21 +13,38 @@ permalink: /readings/
   </div>
 </section>
 
+<nav class="readings-nav" aria-label="Categories">
+  <div class="readings-nav-inner">
+    {% for domain in r.domains %}
+    {% assign slug = domain.name | slugify %}
+    {% if domain.status == "ready" %}
+    <a class="readings-chip" href="#{{ slug }}">{{ domain.name }}</a>
+    {% elsif r.draft %}
+    <span class="readings-chip readings-chip-soon">{{ domain.name }}<span class="soon-tag">soon</span></span>
+    {% endif %}
+    {% endfor %}
+  </div>
+</nav>
+
 {% for domain in r.domains %}
   {% if domain.status == "ready" %}
-<section class="section readings-domain">
-  <div class="section-head">
+  {% assign slug = domain.name | slugify %}
+  {% assign paper_count = 0 %}
+  {% for group in domain.groups %}{% assign paper_count = paper_count | plus: group.papers.size %}{% endfor %}
+<section class="section readings-domain" id="{{ slug }}">
+  <header class="readings-domain-head">
     <h2>{{ domain.name }}</h2>
-    {% if domain.intro_paragraphs %}
-    <div class="readings-domain-intro">
-      {% for paragraph in domain.intro_paragraphs %}
-      <p>{{ paragraph }}</p>
-      {% endfor %}
-    </div>
-    {% elsif domain.intro %}
-    <p class="research-summary-copy">{{ domain.intro }}</p>
-    {% endif %}
+    <span class="readings-count">{{ paper_count }} papers</span>
+  </header>
+  {% if domain.intro_paragraphs %}
+  <div class="readings-domain-intro">
+    {% for paragraph in domain.intro_paragraphs %}
+    <p>{{ paragraph }}</p>
+    {% endfor %}
   </div>
+  {% elsif domain.intro %}
+  <p class="research-summary-copy">{{ domain.intro }}</p>
+  {% endif %}
 
   {% for group in domain.groups %}
   <div class="readings-group">
@@ -35,24 +52,35 @@ permalink: /readings/
     <ol class="readings-list">
       {% for p in group.papers %}
       <li class="reading">
-        <p class="reading-citation">{{ p.citation }}</p>
-        {% if p.url != "" %}
-        {% assign doi = p.url | remove: "https://doi.org/" %}
-        <a class="reading-doi" href="{{ p.url }}">doi.org/{{ doi }}</a>
-        {% endif %}
+        <p class="reading-title">
+          {% if p.url != "" %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+        </p>
+        <p class="reading-meta">{{ p.authors }} · {{ p.year }} · <em>{{ p.venue }}</em></p>
+        {% if p.note != "" %}<p class="reading-note">{{ p.note }}</p>{% endif %}
       </li>
       {% endfor %}
     </ol>
   </div>
   {% endfor %}
 </section>
-
-  {% elsif r.draft %}
-<section class="section readings-domain">
-  <div class="section-head">
-    <h2 class="readings-pending">{{ domain.name }}</h2>
-    <p class="research-summary-copy">{{ domain.intro }}</p>
-  </div>
-</section>
   {% endif %}
 {% endfor %}
+
+<script>
+  (function () {
+    var chips = document.querySelectorAll('.readings-chip[href^="#"]');
+    if (!chips.length || !('IntersectionObserver' in window)) return;
+    var map = {};
+    chips.forEach(function (c) { map[c.getAttribute('href').slice(1)] = c; });
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          chips.forEach(function (c) { c.classList.remove('is-active'); });
+          var chip = map[e.target.id];
+          if (chip) chip.classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-25% 0px -65% 0px' });
+    document.querySelectorAll('.readings-domain[id]').forEach(function (s) { observer.observe(s); });
+  })();
+</script>
