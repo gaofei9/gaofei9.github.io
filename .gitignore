@@ -17,3 +17,6 @@ _site/
 .jekyll-cache/
 vendor/
 Gemfile.lock
+
+# macOS folder metadata
+.DS_Store
