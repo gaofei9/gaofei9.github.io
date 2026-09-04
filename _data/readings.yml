@@ -4,22 +4,20 @@
 # Same rules as home.yml: edit the text to the right of each
 # colon, leave the labels alone, keep the indentation.
 #
-# This page is a DRAFT. It is not linked from the site's
-# navigation, and it asks search engines not to index it.
-# When it is ready, set  draft: false  below and I will add
-# it to the nav.
+# This page is live and linked from the site navigation.
+# Setting  draft: true  hides it from search engines again.
 #
 # Each domain has a status:
 #   ready       shows its groups and papers
 #   placeholder shows a grayed "coming soon" chip in the
-#               category navigation (only while draft: true)
+#               category navigation
 #
 # Each paper: authors, year, title, venue, url, note.
 # The note is optional. Leave it as "" and nothing shows;
 # write a sentence and it appears under the paper.
 # ===========================================================
 
-draft: true
+draft: false
 
 page:
   title: "Key readings"

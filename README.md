@@ -21,6 +21,12 @@ the top.
 holding the research areas and the publication list. The homepage shows
 the first three publications from that list automatically.
 
+**The Key readings page at `/readings/` is edited in `_data/readings.yml`.**
+Each category is a block with groups of papers. To open a new category,
+change its `status` from `placeholder` to `ready` and add groups and
+papers following the Feedback section's shape; its chip in the category
+bar starts working by itself.
+
 `index.html` and `research/index.html` hold only the layout, and read
 the text from those files. Edit them when you want to move or restyle a
 section, not to change wording.
