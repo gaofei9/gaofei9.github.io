@@ -1,0 +1,50 @@
+---
+layout: default
+title: Key readings
+permalink: /readings/
+---
+{% assign r = site.data.readings %}
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">{{ r.page.eyebrow }}</p>
+    <h2>{{ r.page.heading }}</h2>
+    <p class="research-summary-copy">{{ r.page.intro }}</p>
+    {% if r.page.note != "" %}<p class="readings-note">{{ r.page.note }}</p>{% endif %}
+  </div>
+</section>
+
+{% for domain in r.domains %}
+  {% if domain.status == "ready" %}
+<section class="section readings-domain">
+  <div class="section-head">
+    <h2>{{ domain.name }}</h2>
+    {% if domain.intro %}<p class="research-summary-copy">{{ domain.intro }}</p>{% endif %}
+  </div>
+
+  {% for group in domain.groups %}
+  <div class="readings-group">
+    <h3 class="readings-group-head">{{ group.heading }}</h3>
+    <ol class="readings-list">
+      {% for p in group.papers %}
+      <li class="reading">
+        <p class="reading-title">
+          {% if p.url != "" %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+        </p>
+        <p class="reading-meta">{{ p.authors }} ({{ p.year }}) · <em>{{ p.venue }}</em></p>
+        <p class="reading-note">{{ p.note }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+  {% endfor %}
+</section>
+
+  {% elsif r.draft %}
+<section class="section readings-domain">
+  <div class="section-head">
+    <h2 class="readings-pending">{{ domain.name }}</h2>
+    <p class="research-summary-copy">{{ domain.intro }}</p>
+  </div>
+</section>
+  {% endif %}
+{% endfor %}

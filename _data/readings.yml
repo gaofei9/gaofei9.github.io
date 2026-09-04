@@ -1,0 +1,205 @@
+# ===========================================================
+# KEY READINGS PAGE  (/readings/)
+#
+# Same rules as home.yml: edit the text to the right of each
+# colon, leave the labels alone, keep the indentation.
+#
+# This page is a DRAFT. It is not linked from the site's
+# navigation, and it asks search engines not to index it.
+# When it is ready, set  draft: false  below and I will add
+# it to the nav.
+#
+# Each domain has a status:
+#   ready       shows its groups and papers
+#   placeholder shows only the name and a short "in progress" line
+# ===========================================================
+
+draft: true
+
+page:
+  title: "Key readings"
+  eyebrow: "Key readings"
+  heading: "Ideas that shaped how we think about learning"
+  intro: >-
+    These are the papers I return to, grouped by the idea they belong to.
+    The aim is not a ranking. It is a map: what each paper argued, why it
+    mattered, and where later evidence has supported, complicated, or
+    challenged it. Influence is not the same as being right, and a few of
+    these are on the list precisely because the field has argued with them.
+  # Shown in smaller type under the intro. HTML ok.
+  note: >-
+    A work in progress. I add sections as I write them.
+
+
+domains:
+  # ---------------------------------------------------------
+  - name: "Feedback"
+    status: ready
+    intro: >-
+      Feedback is one of the most studied ideas in education and one of the
+      least reliable in practice. The research runs from large effects to no
+      effect to harm, and the interesting question is what separates them.
+    groups:
+      - heading: "The central tension"
+        papers:
+          - authors: "Hattie, J., & Timperley, H."
+            year: "2007"
+            title: "The Power of Feedback"
+            venue: "Review of Educational Research"
+            url: "https://doi.org/10.3102/003465430298487"
+            note: >-
+              Organizes feedback around three questions (Where am I going?
+              How am I going? Where to next?) working at four levels: the
+              task, the process, self-regulation, and the self. The standard
+              reference in the area and the starting point for most later
+              work.
+          - authors: "Kluger, A. N., & DeNisi, A."
+            year: "1996"
+            title: "The effects of feedback interventions on performance: A historical review, a meta-analysis, and a preliminary feedback intervention theory"
+            venue: "Psychological Bulletin"
+            url: "https://doi.org/10.1037/0033-2909.119.2.254"
+            note: >-
+              Across more than 600 studies, about a third of feedback
+              interventions made performance worse. Read alongside Hattie
+              and Timperley: together they move the question from whether
+              feedback works to when it works and when it backfires.
+
+      - heading: "Feedback as part of assessment"
+        papers:
+          - authors: "Sadler, D. R."
+            year: "1989"
+            title: "Formative assessment and the design of instructional systems"
+            venue: "Instructional Science"
+            url: "https://doi.org/10.1007/BF00117714"
+            note: >-
+              Feedback helps only when students can close the gap
+              themselves. That takes a concept of the standard, a way to
+              compare their own work against it, and the means to act. The
+              origin of the idea that feedback must be usable, not merely
+              accurate.
+          - authors: "Black, P., & Wiliam, D."
+            year: "1998"
+            title: "Assessment and Classroom Learning"
+            venue: "Assessment in Education"
+            url: "https://doi.org/10.1080/0969595980050102"
+            note: >-
+              The review that turned formative assessment into a policy
+              priority, arguing that assessment used for learning produces
+              real gains, with the largest for lower-attaining students.
+          - authors: "Shute, V. J."
+            year: "2008"
+            title: "Focus on Formative Feedback"
+            venue: "Review of Educational Research"
+            url: "https://doi.org/10.3102/0034654307313795"
+            note: >-
+              What makes formative feedback work, with concrete guidance on
+              timing, specificity, and complexity. The most practical entry
+              point in this group.
+
+      - heading: "Feedback and self-regulated learning"
+        papers:
+          - authors: "Butler, D. L., & Winne, P. H."
+            year: "1995"
+            title: "Feedback and Self-Regulated Learning: A Theoretical Synthesis"
+            venue: "Review of Educational Research"
+            url: "https://doi.org/10.3102/00346543065003245"
+            note: >-
+              Places feedback inside self-regulated learning: learners
+              generate their own internal feedback while monitoring their
+              work, and feedback from outside is only one input to that
+              loop.
+          - authors: "Winne, P. H., & Hadwin, A. F."
+            year: "1998"
+            title: "Studying as Self-Regulated Learning"
+            venue: "In Metacognition in Educational Theory and Practice"
+            url: ""
+            note: >-
+              The four-phase model of studying: defining the task, setting
+              goals and plans, enacting strategies, and adapting. Much of
+              the later work on learning analytics and self-regulation
+              builds on this architecture.
+          - authors: "Nicol, D., & Macfarlane-Dick, D."
+            year: "2006"
+            title: "Formative assessment and self-regulated learning: a model and seven principles of good feedback practice"
+            venue: "Studies in Higher Education"
+            url: "https://doi.org/10.1080/03075070600572090"
+            note: >-
+              Reframes feedback as something that should build a student's
+              capacity to regulate their own learning, and gives seven
+              principles for doing it. Widely used in course design.
+
+      - heading: "Feedback in digital environments"
+        papers:
+          - authors: "Narciss, S."
+            year: "2007"
+            title: "Feedback Strategies for Interactive Learning Tasks"
+            venue: "Handbook of Research on Educational Communications and Technology"
+            url: ""
+            note: >-
+              A design-oriented account of what feedback should contain and
+              do in an interactive task. Useful when the question is what a
+              system should actually say to a learner.
+          - authors: "van der Kleij, F. M., Feskens, R. C. W., & Eggen, T. J. H. M."
+            year: "2015"
+            title: "Effects of Feedback in a Computer-Based Learning Environment on Students' Learning Outcomes: A Meta-Analysis"
+            venue: "Review of Educational Research"
+            url: "https://doi.org/10.3102/0034654314564881"
+            note: >-
+              Elaborated feedback outperforms telling students only whether
+              they were right. The clearest evidence for why a system should
+              explain rather than mark.
+
+      - heading: "The recent turn: what students do with feedback"
+        papers:
+          - authors: "Boud, D., & Molloy, E."
+            year: "2013"
+            title: "Rethinking models of feedback for learning: the challenge of design"
+            venue: "Assessment & Evaluation in Higher Education"
+            url: "https://doi.org/10.1080/02602938.2012.691462"
+            note: >-
+              Feedback is a process students take part in, not information
+              sent to them, and whether it can work at all is decided by
+              course design rather than by the comment itself.
+          - authors: "Carless, D., & Boud, D."
+            year: "2018"
+            title: "The development of student feedback literacy: enabling uptake of feedback"
+            venue: "Assessment & Evaluation in Higher Education"
+            url: "https://doi.org/10.1080/02602938.2018.1463354"
+            note: >-
+              Introduces feedback literacy: the capabilities students need
+              to make sense of feedback and act on it. Shifts attention from
+              what teachers give to what students can do.
+          - authors: "Wisniewski, B., Zierer, K., & Hattie, J."
+            year: "2020"
+            title: "The Power of Feedback Revisited: A Meta-Analysis of Educational Feedback Research"
+            venue: "Frontiers in Psychology"
+            url: "https://doi.org/10.3389/fpsyg.2019.03087"
+            note: >-
+              Revisits the evidence and finds the effect depends heavily on
+              type: feedback carrying information about the task helps most,
+              while praise and punishment help least.
+
+  # ---------------------------------------------------------
+  - name: "Motivation"
+    status: placeholder
+    intro: >-
+      Self-determination theory, expectancy-value, achievement goals, and
+      mindset. In progress.
+
+  - name: "How learning works"
+    status: placeholder
+    intro: >-
+      Memory, attention, cognitive load, and what changes in the brain with
+      practice. In progress.
+
+  - name: "Learning strategies"
+    status: placeholder
+    intro: >-
+      Retrieval practice, spacing, interleaving, and the evidence on which
+      study techniques earn their reputation. In progress.
+
+  - name: "Online learning environments"
+    status: placeholder
+    intro: >-
+      Self-regulated learning, community of inquiry, learning analytics, and
+      gamification. In progress.
