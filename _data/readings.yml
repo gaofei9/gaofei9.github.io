@@ -22,14 +22,14 @@ draft: false
 page:
   title: "Key readings"
   eyebrow: "Key readings"
-  heading: "Ideas that shaped how we think about learning"
+  heading: "Ideas that shaped how I think about learning"
   intro: >-
     Here are a collection of papers that has influenced my
     thinking about learning and learning design.
 
   # Shown in smaller type under the intro. HTML ok.
   note: >-
-    A work in progress. I add sections as I write them.
+    A work in progress. I will be adding more sections and papers!
 
 
 domains:
@@ -39,8 +39,8 @@ domains:
     # One entry per paragraph.
     intro_paragraphs:
       - >-
-        Feedback is one of the most studied ideas in education and one of the
-        most widely used practices. But are we doing it well?
+        Feedback is one of the most widely used practices in education and
+        also one of the most studied ideas. But are we doing it well?
       - >-
         Research shows that feedback can improve learning, but it can also have
         little effect or even backfire. Much depends on what the feedback
@@ -99,7 +99,7 @@ domains:
             year: "1998"
             title: "Studying as Self-Regulated Learning"
             venue: "In Metacognition in Educational Theory and Practice (Erlbaum)"
-            url: ""
+            url: "https://www.taylorfrancis.com/chapters/edit/10.4324/9781410602350-12/studying-self-regulated-learning-philip-winne-allyson-hadwin"
             note: ""
           - authors: "Nicol, D. J., & Macfarlane-Dick, D."
             year: "2006"
