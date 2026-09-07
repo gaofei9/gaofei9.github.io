@@ -36,7 +36,7 @@ You might argue that the Level 4 links required even more mental work and should
 
 Daniel Willingham, a cognitive psychologist who writes for teachers, put the same principle in five words: “Memory is as thinking does” (2003, “Memory Is as Thinking Does” section). Learners do not necessarily remember the material we give them. They remember what they think about as they process it. The two do not always line up. Much of the craft of teaching lies in bringing them together.
 
-Willingham illustrates this mismatch with a history lesson. A teacher asked his students to bake biscuits so they could appreciate what escaped slaves ate on the Underground Railroad. These students had probably spent 30 seconds thinking about how the biscuits were related to the course material, and then 30 minutes measuring flour and mixing dough. If memory follows thought, Willingham suggested, baking biscuits is likely to be what they remembered!
+Willingham illustrates this mismatch with a history lesson. A teacher asked his students to bake biscuits so they could appreciate what escaped slaves ate on the Underground Railroad. These students had probably spent 30 seconds thinking about how the biscuits were related to the course material, and then 30 minutes thinking about measuring flour and mixing dough. If memory follows thought, Willingham suggested, baking biscuits is likely to be what they remembered!
 
 ## What does it mean for learning design?
 
