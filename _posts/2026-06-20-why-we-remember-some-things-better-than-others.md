@@ -1,5 +1,5 @@
 ---
-title: "Why We Remember Some Things Better Than Others"
+title: "Why We Remember Some Things Better Than Others?"
 description: "A 1984 memory study, Daniel Willingham's five-word rule, and what they suggest about how much to explain when we design a lesson."
 tags: [memory]
 ---
