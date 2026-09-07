@@ -60,8 +60,11 @@ Use these tags so posts group under them:
 - `books` — notes on books about learning
 
 A post can carry more than one tag, and other tags are fine too. Each tag
-gets its own page at `/tag/name/` automatically. The two example posts in
-`_posts/` show the format. Replace them or delete them.
+gets its own page at `/tag/name/` automatically. The post already in
+`_posts/` shows the format; copy it to start a new one.
+
+For a footnote, put `[^1]` where the marker goes and write the note on its
+own line as `[^1]: the text`. Jekyll collects them at the end of the post.
 
 You do not need to install anything on the Mac. When you push, GitHub
 builds the site with Jekyll and publishes it within a minute or two.

@@ -430,6 +430,31 @@ a.tag-chip:hover { background: var(--rose); border-color: var(--rose); color: #f
 }
 .post-content pre code { background: none; border: none; padding: 0; }
 
+/* Footnotes, written as [^1] in the Markdown and collected at the end. */
+.post-content sup a.footnote {
+  color: var(--bronze);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0 0.1rem;
+}
+.post-content sup a.footnote:hover { text-decoration: underline; }
+.post-content .footnotes {
+  margin-top: 2.6rem;
+  color: var(--ink-muted);
+  font-size: 0.92rem;
+}
+.post-content .footnotes hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 0 0 1.4rem;
+  max-width: 8rem;
+  margin-left: 0;
+}
+.post-content .footnotes ol { padding-left: 1.2rem; }
+.post-content .footnotes li { margin-bottom: 0.6rem; }
+.post-content .footnotes p { margin-bottom: 0; }
+.post-content a.reversefootnote { text-decoration: none; margin-left: 0.3rem; }
+
 .post-back { margin-top: 3rem; }
 
 /* ---------- Key readings ---------- */
