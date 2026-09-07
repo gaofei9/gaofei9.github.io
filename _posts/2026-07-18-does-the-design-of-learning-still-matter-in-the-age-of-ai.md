@@ -36,13 +36,13 @@ Students in the ChatGPT group improved their essay scores by 3.60 points on aver
 
 However, the ChatGPT group’s advantage in essay revision did not extend to other measures. The four groups did not differ significantly in knowledge gain, on a transfer test about a related topic, or on any post-task motivation dimension: interest and enjoyment, perceived competence, effort and importance, or pressure and tension.
 
-And here is the most interesting finding. During revision, students in the ChatGPT group repeatedly moved between writing and ChatGPT. Students working with the human expert did not form that loop with their expert. Their revising stayed tied to the reading materials, and they kept moving between the task instructions and their own checking of the draft. The authors call the pattern shown by the students using ChatGPT *metacognitive laziness*. That is, students offloaded some of the work of regulating their learning to AI.[^1]
+And here is the most interesting finding. During revision, students in the ChatGPT group repeatedly moved between writing and ChatGPT. Students working with the human expert did not form that loop with their expert. Their revising stayed tied to the reading materials, and they kept moving between the task instructions and their own checking of the draft. The authors read the pattern shown by the students using ChatGPT as potential *metacognitive laziness*. That is, students offloaded some of the work of regulating their learning to AI.[^1]
 
 [^1]: The term describes an inference from trace patterns, not a disposition that the researchers measured directly.
 
 ## What can we design differently?
 
-Please do not get me wrong. We do have evidence showing that AI can improve measured learning, not just performance when the tool is used.
+Please do not get me wrong. We do have evidence showing that AI can improve learning measured after the lesson, not just performance during it.
 
 Kestin et al. (2025), for example, developed a GPT-4 tutor around research-based instructional practices. The tutor prompted active engagement, managed cognitive load, promoted a growth mindset, guided students through each problem in sequence, and used instructor-written step-by-step solutions.
 
@@ -50,7 +50,7 @@ The researchers then conducted a crossover experiment with 194 students in an in
 
 The authors set clear limits around this result. They write that they “do not presume that structured AI tutoring will always outperform in-class active learning in all contexts, for example, those requiring complex synthesis of multiple concepts and higher-order critical thinking” (Kestin et al., 2025, p. 6). They also argue that AI tutors should not replace in-person teaching.
 
-Taken together, these studies do not tell a simple story about AI. GPT Base offered help without safeguards and was associated with lower unassisted exam scores than the control condition. GPT Tutor offered hints, withheld answers, and produced no significant difference from the control condition on the exam. Kestin’s tutor paired similar safeguards with a platform developed over months to structure students’ progress. Students using it made larger immediate learning gains than students in that study’s active-learning condition.
+Taken together, these studies do not tell a simple story about AI. GPT Base offered help without safeguards and was associated with lower unassisted exam scores than the control condition. GPT Tutor offered hints, withheld answers, and produced no significant difference from the control condition on the exam. Kestin’s tutor paired instructor-written step-by-step solutions with a platform developed over months to structure students’ progress. The same students learned more from the AI-tutored lesson than from the in-class lesson.
 
 Three studies cannot settle the question. The participants ranged from ninth graders at one Turkish high school to undergraduates at Harvard. The AI was used to support practice after a lesson, help students revise an essay, or deliver the lesson itself. The comparison conditions also differed. We cannot attribute the different results to one design feature alone.
 
