@@ -1,7 +1,7 @@
 ---
 title: "Does the Design of Learning Still Matter in the Age of AI?"
 description: "Three studies on AI and learning, and why the design decisions behind an AI tutor are what make the difference."
-tags: [ai]
+tags: [AI]
 ---
 
 If you ask ChatGPT to explain the quadratic formula, photosynthesis process, or why World War II started, you will receive an answer in seconds. You can also ask for a simple explanation, a worked example, or another way to explain it. Better still, your AI friend has endless patience and will respond even at 3am. It is a little dazzling! And if you design learning for a living, as I do, you may start to wonder: If AI can explain anything to anyone, does the design of learning still matter?
