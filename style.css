@@ -402,6 +402,7 @@ a.tag-chip:hover { background: var(--rose); border-color: var(--rose); color: #f
 .tag-count { color: var(--ink-muted); font-size: 0.95rem; margin-top: 0.6rem; }
 
 .post-content { color: var(--ink); }
+.post-content a { overflow-wrap: break-word; }
 .post-content p, .post-content ul, .post-content ol { margin: 0 0 1.15rem; }
 .post-content h2 { font-size: 1.55rem; margin: 2.3rem 0 0.9rem; }
 .post-content h3 { font-size: 1.2rem; margin: 1.8rem 0 0.7rem; }
