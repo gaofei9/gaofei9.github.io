@@ -443,10 +443,15 @@ a.tag-chip:hover { background: var(--rose); border-color: var(--rose); color: #f
   background: var(--rose);
   margin-bottom: 0.8rem;
 }
+/* A post that opens on a heading already has the header's rule above it. */
+.post-content > h2:first-child { margin-top: 0; }
+.post-content > h2:first-child::before { display: none; }
 .post-content h3 { font-size: 1.2rem; margin: 1.8rem 0 0.7rem; }
 
-/* Drop cap on the opening paragraph, Fraunces to match the title. */
-.post-content > p:first-child::first-letter {
+/* Drop cap on the opening paragraph, Fraunces to match the title. The second
+   selector catches posts that open on a section heading. */
+.post-content > p:first-child::first-letter,
+.post-content > h2:first-child + p::first-letter {
   font-family: Fraunces, Georgia, serif;
   font-weight: 600;
   font-size: 3.4em;
