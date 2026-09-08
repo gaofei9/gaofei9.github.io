@@ -380,10 +380,36 @@ a:focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; border-
 
 /* ---------- Blog ---------- */
 
-.post { max-width: 46rem; }
+.post {
+  max-width: 46rem;
+  background:
+    radial-gradient(ellipse 42rem 22rem at 25% -6rem,
+      rgba(160, 115, 90, 0.12), transparent 65%);
+}
 
-.post-header { margin-bottom: 2.5rem; }
-.post-header h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin-bottom: 1rem; }
+.post-header { margin-bottom: 2.8rem; }
+.post-header h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin-bottom: 1.1rem; }
+
+/* The front-matter description doubles as the deck under the title. */
+.post-deck {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  max-width: 38rem;
+  margin-bottom: 1.4rem;
+}
+
+/* Short bronze rule closing the header, echoing the readings group marks. */
+.post-header::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--bronze);
+  margin-top: 2rem;
+  opacity: 0.8;
+}
 
 .post-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
@@ -401,11 +427,34 @@ a.tag-chip:hover { background: var(--rose); border-color: var(--rose); color: #f
 
 .tag-count { color: var(--ink-muted); font-size: 0.95rem; margin-top: 0.6rem; }
 
-.post-content { color: var(--ink); }
+.post-content {
+  color: var(--ink);
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
 .post-content a { overflow-wrap: break-word; }
-.post-content p, .post-content ul, .post-content ol { margin: 0 0 1.15rem; }
-.post-content h2 { font-size: 1.55rem; margin: 2.3rem 0 0.9rem; }
+.post-content p, .post-content ul, .post-content ol { margin: 0 0 1.2rem; }
+.post-content h2 { font-size: 1.55rem; margin: 2.6rem 0 0.9rem; }
+.post-content h2::before {
+  content: "";
+  display: block;
+  width: 1.75rem;
+  height: 2px;
+  background: var(--rose);
+  margin-bottom: 0.8rem;
+}
 .post-content h3 { font-size: 1.2rem; margin: 1.8rem 0 0.7rem; }
+
+/* Drop cap on the opening paragraph, Fraunces to match the title. */
+.post-content > p:first-child::first-letter {
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 600;
+  font-size: 3.4em;
+  line-height: 0.82;
+  float: left;
+  padding: 0.06em 0.12em 0 0;
+  color: var(--bronze);
+}
 .post-content img { max-width: 100%; border-radius: 0.75rem; }
 .post-content blockquote {
   margin: 0 0 1.15rem;
@@ -444,19 +493,96 @@ a.tag-chip:hover { background: var(--rose); border-color: var(--rose); color: #f
   color: var(--ink-muted);
   font-size: 0.92rem;
 }
-.post-content .footnotes hr {
-  border: 0;
+.post-content .footnotes hr { display: none; }
+.post-content .footnotes::before {
+  content: "Notes";
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bronze);
   border-top: 1px solid var(--line);
-  margin: 0 0 1.4rem;
-  max-width: 8rem;
-  margin-left: 0;
+  padding-top: 1.3rem;
+  margin-bottom: 1rem;
 }
 .post-content .footnotes ol { padding-left: 1.2rem; }
 .post-content .footnotes li { margin-bottom: 0.6rem; }
 .post-content .footnotes p { margin-bottom: 0; }
 .post-content a.reversefootnote { text-decoration: none; margin-left: 0.3rem; }
 
-.post-back { margin-top: 3rem; }
+/* APA reference list: hanging indents, quieter type. kramdown gives the
+   "## References" heading id="references" automatically. */
+.post-content h2#references ~ p {
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  padding-left: 1.6rem;
+  text-indent: -1.6rem;
+  margin-bottom: 0.9rem;
+}
+
+/* ----- End of post ----- */
+
+.post-end {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.2rem;
+  color: var(--bronze);
+  text-align: center;
+  letter-spacing: 0.4em;
+  margin: 3rem 0 0;
+}
+
+.post-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 2.8rem;
+}
+
+.post-nav-card {
+  background: var(--ground-raised);
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: border-color 150ms ease, transform 150ms ease;
+  box-shadow: 0 10px 25px rgba(138, 95, 75, 0.05);
+}
+.post-nav-card:hover {
+  border-color: var(--bronze-deep);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .post-nav-card:hover { transform: none; }
+}
+
+.post-nav-card-next { align-items: flex-end; text-align: right; }
+
+.post-nav-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bronze);
+}
+.post-nav-title {
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.post-nav-card:hover .post-nav-title { color: var(--bronze-deep); }
+
+.post-back {
+  margin-top: 2.2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
 
 /* ---------- Key readings ---------- */
 
@@ -702,6 +828,8 @@ a.readings-chip:hover {
 
 @media (max-width: 46rem) {
   .hero-inner { grid-template-columns: 1fr; }
+  .post-nav { grid-template-columns: 1fr; }
+  .post-nav-card-next { align-items: flex-start; text-align: left; }
   .portrait { max-width: 18rem; }
   .cred-strip { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }

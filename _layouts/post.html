@@ -1,10 +1,15 @@
 ---
 layout: default
 ---
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign minutes = words | divided_by: 200 | at_least: 1 -%}
 <article class="section post">
   <header class="post-header">
-    <p class="eyebrow">{{ page.date | date: "%B %-d, %Y" }}</p>
+    <p class="eyebrow">{{ page.date | date: "%B %-d, %Y" }} · {{ minutes }} min read</p>
     <h1>{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="post-deck">{{ page.description }}</p>
+    {% endif %}
     {% if page.tags.size > 0 %}
     <p class="post-tags">
       {% for tag in page.tags %}
@@ -17,6 +22,25 @@ layout: default
   <div class="post-content">
     {{ content }}
   </div>
+  <p class="post-end" aria-hidden="true">· · ·</p>
+  {% if page.previous or page.next %}
+  <nav class="post-nav" aria-label="More posts">
+    {% if page.previous %}
+    <a class="post-nav-card" href="{{ page.previous.url | relative_url }}">
+      <span class="post-nav-label">← Previous</span>
+      <span class="post-nav-title">{{ page.previous.title }}</span>
+    </a>
+    {% else %}
+    <span class="post-nav-spacer" aria-hidden="true"></span>
+    {% endif %}
+    {% if page.next %}
+    <a class="post-nav-card post-nav-card-next" href="{{ page.next.url | relative_url }}">
+      <span class="post-nav-label">Next →</span>
+      <span class="post-nav-title">{{ page.next.title }}</span>
+    </a>
+    {% endif %}
+  </nav>
+  {% endif %}
   <p class="post-back"><a href="{{ '/blog/' | relative_url }}">← All posts</a></p>
 </article>
 
