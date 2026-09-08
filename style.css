@@ -390,16 +390,6 @@ a:focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; border-
 .post-header { margin-bottom: 2.8rem; }
 .post-header h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin-bottom: 1.1rem; }
 
-/* The front-matter description doubles as the deck under the title. */
-.post-deck {
-  font-family: Fraunces, Georgia, serif;
-  font-size: 1.3rem;
-  line-height: 1.5;
-  color: var(--ink-muted);
-  max-width: 38rem;
-  margin-bottom: 1.4rem;
-}
-
 /* Short bronze rule closing the header, echoing the readings group marks. */
 .post-header::after {
   content: "";
