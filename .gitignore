@@ -6,8 +6,9 @@
 Gao_CV_updated.docx
 *.docx
 
-# Design reference image (Canva template), not published
+# Design reference images (Canva templates), not published
 Blush Bronze Website Launch Promo Instagram Post.png
+examples/
 
 # Full-size photo source. The site serves the optimized copies in images/.
 /Gao_2022.jpg
