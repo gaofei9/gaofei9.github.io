@@ -40,5 +40,27 @@
     <p class="footer-note">{{ site.data.home.footer.disclaimer }}</p>
   </footer>
 
+  <!-- GoatCounter analytics: cookie-free page counts, dashboard at
+       https://gaofei.goatcounter.com. Counting is skipped off the live
+       host, and in any browser where she has visited
+       /#toggle-goatcounter once, so her own reading and editing do not
+       inflate the numbers. Visiting that link again re-enables it. -->
+  <script>
+    if (window.location.hash === '#toggle-goatcounter') {
+      if (localStorage.getItem('skipgc') === 't') {
+        localStorage.removeItem('skipgc')
+        alert('GoatCounter tracking is now ENABLED in this browser.')
+      } else {
+        localStorage.setItem('skipgc', 't')
+        alert('GoatCounter tracking is now DISABLED in this browser.')
+      }
+    }
+    if (window.location.host !== 'gaofei9.github.io'
+        || localStorage.getItem('skipgc') === 't')
+      window.goatcounter = {no_onload: true}
+  </script>
+  <script data-goatcounter="https://gaofei.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+
 </body>
 </html>
