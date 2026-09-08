@@ -380,25 +380,28 @@ a:focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; border-
 
 /* ---------- Blog ---------- */
 
-.post {
-  max-width: 46rem;
+/* Full-width tinted band holding the post header: one step deeper than the
+   page ground, with the bronze glow from the homepage hero inside it. The
+   inner column matches the article column so the title aligns with the text. */
+.post-band {
   background:
-    radial-gradient(ellipse 42rem 22rem at 25% -6rem,
-      rgba(160, 115, 90, 0.12), transparent 65%);
+    radial-gradient(ellipse 40rem 20rem at 72% 115%,
+      rgba(160, 115, 90, 0.18), transparent 65%),
+    linear-gradient(180deg, #eedddc 0%, var(--ground-strong) 100%);
+  border-bottom: 1px solid var(--line);
 }
 
-.post-header { margin-bottom: 2.8rem; }
-.post-header h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin-bottom: 1.1rem; }
+.post-band-inner {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 2.8rem;
+}
 
-/* Short bronze rule closing the header, echoing the readings group marks. */
-.post-header::after {
-  content: "";
-  display: block;
-  width: 2.5rem;
-  height: 2px;
-  background: var(--bronze);
-  margin-top: 2rem;
-  opacity: 0.8;
+.post-band h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin-bottom: 1.1rem; }
+
+.post {
+  max-width: 46rem;
+  padding-top: 3.25rem;
 }
 
 .post-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
@@ -433,7 +436,7 @@ a.tag-chip:hover { background: var(--rose); border-color: var(--rose); color: #f
   background: var(--rose);
   margin-bottom: 0.8rem;
 }
-/* A post that opens on a heading already has the header's rule above it. */
+/* A post that opens on a heading already has the band's edge above it. */
 .post-content > h2:first-child { margin-top: 0; }
 .post-content > h2:first-child::before { display: none; }
 .post-content h3 { font-size: 1.2rem; margin: 1.8rem 0 0.7rem; }
@@ -825,6 +828,8 @@ a.readings-chip:hover {
   .hero-inner { grid-template-columns: 1fr; }
   .post-nav { grid-template-columns: 1fr; }
   .post-nav-card-next { align-items: flex-start; text-align: left; }
+  .post-band-inner { padding: 3rem 1.5rem 2.2rem; }
+  .post { padding-top: 2.5rem; }
   .portrait { max-width: 18rem; }
   .cred-strip { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
