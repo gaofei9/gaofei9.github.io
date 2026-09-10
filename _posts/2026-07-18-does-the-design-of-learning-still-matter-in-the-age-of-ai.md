@@ -52,7 +52,9 @@ The authors set clear limits around this result. They write that they “do not 
 
 Taken together, these studies do not tell a simple story about AI. GPT Base offered help without safeguards and was associated with lower unassisted exam scores than the control condition. GPT Tutor offered hints, withheld answers, and produced no significant difference from the control condition on the exam. Kestin’s tutor paired instructor-written step-by-step solutions with a platform developed over months to structure students’ progress. The same students learned more from the AI-tutored lesson than from the in-class lesson.
 
-Three studies cannot settle the question. The participants ranged from ninth graders at one Turkish high school to undergraduates at Harvard. The AI was used to support practice after a lesson, help students revise an essay, or deliver the lesson itself. The comparison conditions also differed. We cannot attribute the different results to one design feature alone.
+Three studies cannot settle the question. The participants ranged from ninth graders at one Turkish high school to undergraduates at Harvard. The AI was used to support practice after a lesson, help students revise an essay, or deliver the lesson itself. The comparison conditions also differed. We cannot attribute the different results to one design feature alone.[^2]
+
+[^2]: Two recent meta-analyses (Deng et al., 2025; Wu et al., 2026) found that students who used ChatGPT generally performed better than those in the comparison groups. These findings do not necessarily tell us how much students learned. Deng et al. found that nine studies allowed students to use ChatGPT during the final assessment. Another 33 did not report whether ChatGPT was allowed. In the first nine studies, the assessment measured what students could produce with ChatGPT, much like the practice scores in the Turkish high school study. In the other 33, we do not know whether the students worked independently. Wu et al. did not examine this issue. The pooled results therefore mix different kinds of performance and cannot tell us clearly what students could do on their own.
 
 However, one pattern is clear. Someone has to decide what an AI tutor will provide and/or hold back, when it will offer a hint, how it will sequence a problem, and which mistakes it will anticipate. Each choice is a learning design decision. Each depends on an understanding of how people learn. **The design is what makes the difference.**
 
@@ -64,6 +66,10 @@ Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2025)
 
 Clark, R. E. (1983). Reconsidering research on learning from media. *Review of Educational Research, 53*(4), 445–459.
 
+Deng, R., Jiang, M., Yu, X., Lu, Y., & Liu, S. (2025). Does ChatGPT enhance student learning? A systematic review and meta-analysis of experimental studies. *Computers & Education, 227*, Article 105224. <https://doi.org/10.1016/j.compedu.2024.105224>
+
 Fan, Y., Tang, L., Le, H., Shen, K., Tan, S., Zhao, Y., Shen, Y., Li, X., & Gašević, D. (2025). Beware of metacognitive laziness: Effects of generative artificial intelligence on learning motivation, processes, and performance. *British Journal of Educational Technology, 56*(2), 489–530. <https://doi.org/10.1111/bjet.13544>
 
 Kestin, G., Miller, K., Klales, A., Milbourne, T., & Ponti, G. (2025). AI tutoring outperforms in-class active learning: An RCT introducing a novel research-based design in an authentic educational setting. *Scientific Reports, 15*, Article 17458. <https://doi.org/10.1038/s41598-025-97652-6>
+
+Wu, X., Zhu, P., Zhang, J., Yin, M., & Wang, Y. (2026). ChatGPT’s impact on student learning outcomes: A meta-analysis of 35 experimental studies. *Humanities and Social Sciences Communications, 13*, Article 684. <https://doi.org/10.1057/s41599-026-07019-z>
