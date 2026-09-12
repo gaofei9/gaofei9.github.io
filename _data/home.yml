@@ -98,8 +98,8 @@ about:
   eyebrow: "About"
   heading: "A little background"
   pull_quote: >-
-    Try something, watch what happens, adjust. Learning improves when we
-    treat it as an experiment.
+    Try, notice, adjust. We learn more, and enjoy it more, when we treat
+    learning as an experiment.
   # One entry per paragraph. HTML ok.
   paragraphs:
     - >-
@@ -140,8 +140,8 @@ research_summary:
 # The posts themselves come from the _posts folder automatically.
 blog:
   eyebrow: "Blog"
-  heading: "Recent posts"
-  all_posts_text: "All posts →"
+  heading: "Recent essays"
+  all_posts_text: "All essays →"
 
 
 # ---------- Newsletter signup ----------
@@ -150,7 +150,7 @@ newsletter:
   eyebrow: "Newsletter"
   heading: "Get new posts by email"
   copy: >-
-    Receive my posts by email: research worth knowing, tools worth trying,
+    Research worth knowing, tools worth trying,
     books worth reading. Unsubscribe at any time.
   button_text: "Subscribe"
 
@@ -160,8 +160,7 @@ contact:
   eyebrow: "Contact"
   heading: "Stay in touch"
   copy: >-
-    For collaboration or inquiries, please send me a message and
-    I will get back to you.
+    For collaboration or inquiries, please send me a message.
   button_text: "Send me a message"
   fallback_button_text: "Contact me at BGSU"
   fallback_url: "https://www.bgsu.edu/technology-architecture-and-applied-engineering/about-the-college/faculty-and-staff-directory/fei-gao.html"
