@@ -100,7 +100,7 @@ git push
 ```
 
 The first push will ask you to sign in to GitHub. The site is live at
-https://gaofei9.github.io a minute or two after each push.
+https://drfeigao.com a minute or two after each push.
 
 ## Safety notes
 

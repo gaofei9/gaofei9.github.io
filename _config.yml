@@ -3,7 +3,7 @@ description: >-
   Fei Gao, learning scientist and professor at Bowling Green State University.
   Writing on the science of learning, motivation, learning tools and
   techniques, and books about learning.
-url: "https://gaofei9.github.io"
+url: "https://drfeigao.com"
 
 markdown: kramdown
 permalink: /blog/:year/:title/
