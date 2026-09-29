@@ -31,7 +31,7 @@
     font-family:var(--display); font-weight:700; font-size:clamp(1.9rem,4.4vw,3rem);
     line-height:1.05; margin:0 0 .5rem; text-wrap:balance; letter-spacing:-.015em;
   }
-  .lede{margin:0; color:var(--brown); font-size:1.06rem; max-width:62ch}
+  .lede{margin:0; color:var(--brown); font-size:1.06rem}
   .rule{height:2px; background:var(--orange); border:0; margin:22px 0 0}
 
   section{margin-top:40px}
@@ -39,7 +39,7 @@
     font-family:var(--display); font-weight:700; font-size:1.55rem;
     margin:0 0 .2rem; letter-spacing:-.01em;
   }
-  .note{margin:0 0 18px; color:var(--brown); font-size:.97rem; max-width:70ch}
+  .note{margin:0 0 18px; color:var(--brown); font-size:.97rem; max-width:120ch}
 
   /* ---------- offering grid ---------- */
   .gridwrap{overflow-x:auto}
@@ -164,19 +164,18 @@
 <div class="wrap">
   <p class="eyebrow">BOWLING GREEN STATE UNIVERSITY </p>
   <h1>Instructional Design and Technology</h1>
-  <p class="lede">Ten courses, six start dates a year. Pick a path, a pace, and a
-    starting point below to see the suggested course-taking plans.</p>
+  <p class="lede">Ten courses, six start dates a year.<span style="display:block; margin-top:.5em">Pick a path, a pace, and a starting point below to see the suggested course-taking plans.</span></p>
   <hr class="rule">
 
   <section>
     <h2>When each course is offered</h2>
-    <p class="note">Each session is 7 week long. Sessions run back to back.</p>
+    <p class="note">Each session is 7 weeks long. Sessions run back to back.</p>
     <div class="gridwrap"><div class="grid" id="grid"></div></div>
   </section>
 
   <section>
     <h2>Build your plan</h2>
-    <p class="note">The following sequences are suggested pathways based on the approved course matrix. Expedited plans double up wherever two courses are offered together, which is not every session, so some start dates finish faster than others. Please adjust as needed to fit your individual schedule and requirements.</p>
+    <p class="note">The following sequences are suggested pathways based on the approved course matrix.<span style="display:block; margin-top:.5em">If you follow the expedited plan, you may take two courses in some sessions, though this will not be possible in every session. As a result, some start dates may allow you to complete the program faster than others. Please adjust as needed to fit your individual schedule and requirements.</span></p>
 
     <div class="controls">
       <div class="ctl" id="tracks" role="group" aria-label="Choose a path"><p>YOUR PATH</p></div>
