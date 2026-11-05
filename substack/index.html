@@ -1,0 +1,209 @@
+---
+layout: null
+title: Substack export
+permalink: /substack/
+---
+{% comment %}
+  Private helper page, not linked from the site. Each post is shown in a
+  Substack-friendly form with buttons that copy the title, subtitle, and
+  formatted body, ready to paste into the Substack editor.
+{% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Substack export · Fei Gao</title>
+  <style>
+    :root { --ink: #1f1d1a; --muted: #6b665e; --line: #e4ded3; --accent: #ff6719; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 2rem 1rem 4rem; background: #faf8f4; color: var(--ink);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .wrap { max-width: 44rem; margin: 0 auto; }
+    .intro { color: var(--muted); }
+    .intro ol { padding-left: 1.2rem; }
+    label.opt { display: inline-flex; gap: .4rem; align-items: center; margin-top: .5rem; }
+    details.post { background: #fff; border: 1px solid var(--line); border-radius: 10px;
+      margin: 1rem 0; padding: .9rem 1.2rem; }
+    details.post > summary { cursor: pointer; font-weight: 600; }
+    details.post > summary small { color: var(--muted); font-weight: 400; }
+    .field { display: flex; flex-wrap: wrap; gap: .6rem; align-items: baseline;
+      padding: .7rem 0; border-bottom: 1px solid var(--line); }
+    .field-label { font-size: .75rem; text-transform: uppercase; letter-spacing: .06em;
+      color: var(--muted); min-width: 5rem; }
+    .field-value { flex: 1 1 16rem; }
+    button { font: inherit; font-size: .85rem; padding: .35rem .8rem; border-radius: 6px;
+      border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; }
+    button.done { background: #fff; color: var(--accent); }
+    .body-head { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; }
+    .preview { font-family: Georgia, serif; font-size: 1.05rem; border-left: 3px solid var(--line);
+      padding-left: 1rem; margin-top: .5rem; }
+    .preview h2 { font-size: 1.35rem; }
+    .preview a { color: var(--ink); }
+    .source { display: none; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Substack export</h1>
+  <div class="intro">
+    <p>For each post, in a new Substack draft:</p>
+    <ol>
+      <li><strong>Copy title</strong>, paste into the title field.</li>
+      <li><strong>Copy subtitle</strong>, paste into the subtitle field.</li>
+      <li><strong>Copy body</strong>, click into the body, and paste.</li>
+    </ol>
+    <p>Footnotes become numbered <em>Notes</em> placed before the references.</p>
+    <label class="opt"><input type="checkbox" id="opt-origin" checked> End with an “Originally published at …” line</label>
+  </div>
+
+  {% for post in site.posts %}
+  <details class="post"{% if forloop.first %} open{% endif %}>
+    <summary>{{ post.title }} <small>· {{ post.date | date: "%B %-d, %Y" }}</small></summary>
+
+    <div class="field">
+      <span class="field-label">Title</span>
+      <span class="field-value" data-copy-text>{{ post.title }}</span>
+      <button type="button" data-copy="title">Copy title</button>
+    </div>
+    <div class="field">
+      <span class="field-label">Subtitle</span>
+      <span class="field-value" data-copy-text>{{ post.description }}</span>
+      <button type="button" data-copy="subtitle">Copy subtitle</button>
+    </div>
+
+    <div class="body-head">
+      <span class="field-label">Body</span>
+      <button type="button" data-copy="body">Copy body</button>
+    </div>
+    <div class="source" data-url="{{ post.url | absolute_url }}">{{ post.content }}</div>
+    <div class="preview"></div>
+  </details>
+  {% endfor %}
+</div>
+
+<script>
+(function () {
+  var originBox = document.getElementById('opt-origin');
+
+  // Turn a rendered post into plain, Substack-friendly HTML.
+  function convert(source) {
+    var root = source.cloneNode(true);
+    var postUrl = source.getAttribute('data-url');
+
+    // Make every link and image absolute so they still work on Substack.
+    root.querySelectorAll('a[href]').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (href.charAt(0) === '#') return;
+      a.setAttribute('href', new URL(href, postUrl).href);
+    });
+    root.querySelectorAll('img[src]').forEach(function (img) {
+      img.setAttribute('src', new URL(img.getAttribute('src'), postUrl).href);
+    });
+
+    // Footnote markers: keep the number as plain superscript text.
+    root.querySelectorAll('sup[id^="fnref"]').forEach(function (sup) {
+      var plain = document.createElement('sup');
+      plain.textContent = sup.textContent.trim();
+      sup.replaceWith(plain);
+    });
+
+    // Footnote list: rebuild as a "Notes" section before the references.
+    var footnotes = root.querySelector('.footnotes');
+    if (footnotes) {
+      var items = footnotes.querySelectorAll('li');
+      var notes = document.createDocumentFragment();
+      var heading = document.createElement('h2');
+      heading.textContent = 'Notes';
+      notes.appendChild(heading);
+      items.forEach(function (li, i) {
+        li.querySelectorAll('.reversefootnote').forEach(function (back) { back.remove(); });
+        li.querySelectorAll('p').forEach(function (p, j) {
+          var para = document.createElement('p');
+          para.innerHTML = (j === 0 ? '<sup>' + (i + 1) + '</sup> ' : '') + p.innerHTML.trim();
+          notes.appendChild(para);
+        });
+      });
+      footnotes.remove();
+      var refs = Array.prototype.find.call(root.querySelectorAll('h2'), function (h) {
+        return /^references$/i.test(h.textContent.trim());
+      });
+      if (refs) refs.before(notes); else root.appendChild(notes);
+    }
+
+    // Drop ids and classes Substack has no use for.
+    root.querySelectorAll('[id],[class]').forEach(function (el) {
+      el.removeAttribute('id');
+      el.removeAttribute('class');
+    });
+
+    if (originBox.checked) {
+      var origin = document.createElement('p');
+      origin.innerHTML = '<em>Originally published at <a href="' + postUrl + '">' +
+        postUrl.replace(/^https?:\/\//, '').replace(/\/$/, '') + '</a>.</em>';
+      root.appendChild(origin);
+    }
+    return root.innerHTML.trim();
+  }
+
+  function render() {
+    document.querySelectorAll('details.post').forEach(function (post) {
+      post.querySelector('.preview').innerHTML = convert(post.querySelector('.source'));
+    });
+  }
+
+  function copy(html, text) {
+    if (navigator.clipboard && window.ClipboardItem) {
+      var item = { 'text/plain': new Blob([text], { type: 'text/plain' }) };
+      if (html) item['text/html'] = new Blob([html], { type: 'text/html' });
+      return navigator.clipboard.write([new ClipboardItem(item)]);
+    }
+    // Fallback: select the content on the page and copy the selection.
+    return new Promise(function (resolve, reject) {
+      var holder = document.createElement('div');
+      holder.style.position = 'fixed';
+      holder.style.left = '-9999px';
+      if (html) holder.innerHTML = html; else holder.textContent = text;
+      document.body.appendChild(holder);
+      var range = document.createRange();
+      range.selectNodeContents(holder);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      var ok = document.execCommand('copy');
+      sel.removeAllRanges();
+      holder.remove();
+      ok ? resolve() : reject();
+    });
+  }
+
+  document.addEventListener('click', function (event) {
+    var button = event.target.closest('button[data-copy]');
+    if (!button) return;
+    var post = button.closest('details.post');
+    var kind = button.getAttribute('data-copy');
+    var job;
+    if (kind === 'body') {
+      var preview = post.querySelector('.preview');
+      job = copy(preview.innerHTML, preview.innerText);
+    } else {
+      job = copy(null, button.parentNode.querySelector('[data-copy-text]').textContent.trim());
+    }
+    var label = button.textContent;
+    job.then(function () {
+      button.textContent = 'Copied ✓';
+      button.classList.add('done');
+    }, function () {
+      button.textContent = 'Copy failed';
+    }).then(function () {
+      setTimeout(function () { button.textContent = label; button.classList.remove('done'); }, 1800);
+    });
+  });
+
+  originBox.addEventListener('change', render);
+  render();
+})();
+</script>
+</body>
+</html>
