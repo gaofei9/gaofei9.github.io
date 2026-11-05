@@ -1,10 +1,9 @@
 ---
 title: "How to Design Educational and Training Programs for Real Behavior Change?"
 description: "A review of meta-analyses ranks what actually changes behavior. Knowledge does little on its own, while skills, support, reminders, habits, and access do more."
+subtitle: "Insight gained from Albarracín and colleagues (2024)"
 tags: [behavior change]
 ---
-
-*Insight gained from Albarracín and colleagues (2024)*
 
 Which of the following do you think has the greatest impact when you want to change people’s behavior? The behavior could be anything from brushing your teeth to getting vaccinated. How would you rank them, from most to least effective?
 

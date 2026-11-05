@@ -7,6 +7,7 @@ layout: default
   <div class="post-band-inner">
     <p class="eyebrow">{{ page.date | date: "%B %-d, %Y" }} · {{ minutes }} min read</p>
     <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
     {% if page.tags.size > 0 %}
     <p class="post-tags">
       {% for tag in page.tags %}

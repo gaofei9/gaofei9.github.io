@@ -398,6 +398,7 @@ a:focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; border-
 }
 
 .post-band h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin-bottom: 1.1rem; }
+.post-subtitle { font-size: 1.15rem; font-style: italic; color: var(--ink-muted); margin: -0.4rem 0 1.1rem; }
 
 .post {
   max-width: 46rem;
