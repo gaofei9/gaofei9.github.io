@@ -82,15 +82,6 @@ Arthur and colleagues (2003) make a related point about training: trained skills
 
 Information still has a place. The authors recommend introducing some basic information about a behavior to an audience that is not familiar with it. However, when a program is meant to change what people do, the content is only one part of the design. Whether people actually do what the program teaches may depend not only on what they know but also on the practice they get, the support of the people around them, the reminders they receive, and their access to the resources they need.[^scope]
 
-The authors’ overall verdict is as follows.
-
-| Effect on behavior | Individual | Social-structural |
-|---|---|---|
-| Negligible | knowledge, general skills, general attitudes, beliefs | legal and administrative sanctions, trustworthiness |
-| Small | emotions, behavioral skills, behavioral attitudes | injunctive norms, monitors and reminders, descriptive norms, material incentives |
-| Medium | habits | social support |
-| Large | | access |
-
 ## References
 
 Albarracín, D., Fayaz-Farkhad, B., & Granados Samayoa, J. A. (2024). Determinants of behaviour and their efficacy as targets of behavioural change interventions. *Nature Reviews Psychology, 3*(6), 377–392. <https://doi.org/10.1038/s44159-024-00305-0>
