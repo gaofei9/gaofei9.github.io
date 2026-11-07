@@ -1,0 +1,181 @@
+# ===========================================================
+# HOMEPAGE TEXT
+#
+# Everything you can see on the homepage is written here.
+# Edit the text to the RIGHT of each colon. Leave the labels
+# on the LEFT alone, and keep the indentation as it is.
+#
+# Plain text is fine, including & and quotation marks.
+# Where a line is marked "HTML ok", you may also use simple
+# tags like <em>italics</em> and links.
+#
+# The research page has its own file: _data/research.yml.
+#
+# To publish a change: save, then commit and push.
+# The live site updates a minute or two later.
+# ===========================================================
+
+# Shown in search results and when the page is shared.
+meta_description: >-
+  Fei Gao, learning scientist and professor at Bowling Green State University.
+  Writing on the science of learning, motivation, learning tools and
+  techniques, and books about learning.
+
+
+# ---------- Top of the page ----------
+hero:
+  eyebrow: "Educational Psychologist & Learning Scientist"
+  name: "Fei Gao"
+  # One entry per paragraph.
+  lede_paragraphs:
+    - >-
+      How can we cultivate the desire to learn, and how can we learn better?
+    - >-
+      I seek answers to these questions by studying what helps people learn:
+      the science of motivation, the environments that support learning, the
+      neuroscience of how our brains change, and the evidence-based tools
+      and strategies that can make learning more effective.
+    - >-
+      As a learning scientist, I also treat my own learning as an ongoing
+      experiment. I try different approaches, pay attention to what works,
+      and adjust what does not. I keep learning from the process. I invite
+      you to do the same: become a scientist of learning,
+      experiment with different approaches, and discover what helps you and
+      others learn best.
+  portrait_alt: "Fei Gao"
+  primary_button:
+    text: "Read the blog"
+    link: "blog/"
+  secondary_button:
+    text: "Get in touch"
+    link: "#contact"
+
+# The three facts in the strip under the photo.
+# Add or remove entries freely; each needs a label and a value.
+credentials:
+  - label: "Affiliation"
+    value: "Bowling Green State University"
+  - label: "Focus"
+    value: "Learning analytics, gamification & simulation, online learning"
+  - label: "Recognition"
+    value: "Stanford/Elsevier Top 2% Scientists, 2025"
+
+
+# ---------- What I write about ----------
+# The four themes of the blog. When you tag posts, use the tag shown
+# in the comment next to each card so posts group under these themes.
+write_about:
+  eyebrow: "What I write about"
+  heading: "The science and practice of learning better"
+  areas:
+    - number: "I"                     # tag: science-of-learning
+      title: "Science of learning"
+      text: >-
+        How learning works: memory, attention, and how the brain changes
+        with practice. I draw on my own research and the work of others to
+        explore what the science means for everyday learning.
+    - number: "II"                    # tag: motivation
+      title: "Motivation"
+      text: >-
+        Why we start, why we quit, and what keeps us going. Motivation is
+        at the heart of my research, and I write about what the science
+        tells us and how to put it to work in your own learning.
+    - number: "III"                   # tag: tools
+      title: "Tools & techniques"
+      text: >-
+        Mnemonics, spaced practice, retrieval, and other techniques supported by scientific evidence. What they are, when they help, and how to
+        put them into practice.
+    - number: "IV"                    # tag: books
+      title: "Books"
+      text: >-
+        Notes on books about learning and learning design: the ideas in
+        each book, the research behind the ideas, and where the evidence
+        supports, complicates, or challenges those ideas.
+
+
+# ---------- About ----------
+about:
+  eyebrow: "About"
+  heading: "A little background"
+  pull_quote: >-
+    Observe with curiosity, try with courage, reflect with honesty, and
+    adjust with patience. We learn more, and enjoy it more, when we treat
+    learning as an experiment.
+  # One entry per paragraph. HTML ok.
+  paragraphs:
+    - >-
+      I am a Professor in Instructional Design and Technology at Bowling
+      Green State University, where I also serve as Associate Dean for
+      Faculty Affairs and Research. I earned my Ph.D. in Educational
+      Psychology and Educational Technology from Michigan State University,
+      and I have studied how people learn ever since. My research is
+      funded by the National Science Foundation, and I serve as Associate
+      Editor for <em>Educational Technology &amp; Society</em> and the
+      <em>Online Learning Journal</em>.
+    - >-
+      Away from work, I am an avid reader and a curious learner. I read
+      widely on the science of learning, from motivation to memory to brain
+      plasticity. This site is where I reflect on my
+      own experiences as a learner, educator, and researcher, and write
+      about research worth knowing, tools worth trying, and books worth
+      reading about how we learn. 
+
+
+# ---------- Research summary on the homepage ----------
+# The full research page lives at /research/ and is edited in
+# _data/research.yml. The three papers shown here come from the top of
+# the publication list in that file.
+research_summary:
+  eyebrow: "Research"
+  heading: "My research"
+  copy: >-
+    In my research, I study how the design of online learning environments
+    shapes motivation, participation, and learning, with recent projects on
+    gamification, learning analytics dashboards, and virtual reality. 
+    You may find more information about my research and publications
+    on the <a href='/research/'>research page</a>.
+  link_text: "All research and publications →"
+
+
+# ---------- Blog section on the homepage ----------
+# The posts themselves come from the _posts folder automatically.
+blog:
+  eyebrow: "Blog"
+  heading: "Recent essays"
+  all_posts_text: "All essays →"
+
+
+# ---------- Newsletter signup ----------
+# This block appears on the homepage and on every blog page.
+newsletter:
+  eyebrow: "Newsletter"
+  heading: "Get new posts by email"
+  copy: >-
+    Research worth knowing, tools worth trying,
+    books worth reading. Unsubscribe at any time.
+  button_text: "Subscribe"
+
+
+# ---------- Contact ----------
+contact:
+  eyebrow: "Contact"
+  heading: "Stay in touch"
+  copy: >-
+    For collaboration or inquiries, please send me a message.
+  button_text: "Send me a message"
+  fallback_button_text: "Contact me at BGSU"
+  fallback_url: "https://www.bgsu.edu/technology-architecture-and-applied-engineering/about-the-college/faculty-and-staff-directory/fei-gao.html"
+
+
+# ---------- Footer ----------
+footer:
+  copyright: "© 2026 Fei Gao"
+  links:
+    - text: "Google Scholar"
+      url: "https://scholar.google.com/citations?user=ddWcpbgAAAAJ&amp;hl=en"
+    - text: "LinkedIn"
+      url: "https://www.linkedin.com/in/gaofei/"
+  # Shown under the footer links on every page of the site.
+  disclaimer: >-
+    The views expressed here are my own and do not represent those of
+    Bowling Green State University.

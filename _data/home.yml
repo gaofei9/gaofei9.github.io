@@ -18,30 +18,33 @@
 # Shown in search results and when the page is shared.
 meta_description: >-
   Fei Gao, learning scientist and professor at Bowling Green State University.
-  Writing on the science of learning, motivation, learning tools and
-  techniques, and books about learning.
+  Writing on the science of learning and behavior change, tools and
+  techniques, and books.
 
 
 # ---------- Top of the page ----------
 hero:
-  eyebrow: "Educational Psychologist & Learning Scientist"
+  eyebrow: "Learning & Behavior Design Scientist"
   name: "Fei Gao"
   # One entry per paragraph.
   lede_paragraphs:
     - >-
-      How can we cultivate the desire to learn, and how can we learn better?
+      How can we cultivate the motivation to learn and grow, learn more
+      effectively, and foster positive behavior change in ourselves and others?
     - >-
-      I seek answers to these questions by studying what helps people learn:
-      the science of motivation, the environments that support learning, the
-      neuroscience of how our brains change, and the evidence-based tools
-      and strategies that can make learning more effective.
+      I seek answers to these questions by studying what helps people
+      learn and change their behaviors: the science of motivation, the
+      neuroscience of how our brains work, the environments that 
+      support learning and behavior change, and the evidence-based tools
+      and strategiesthat put the science into practice.
     - >-
-      As a learning scientist, I also treat my own learning as an ongoing
-      experiment. I try different approaches, pay attention to what works,
-      and adjust what does not. I keep learning from the process. I invite
-      you to do the same: become a scientist of learning,
-      experiment with different approaches, and discover what helps you and
-      others learn best.
+      As a learning and behavior design scientist, I approach my own
+      learning and everyday habits as an ongoing experiment. I try different
+      approaches, pay attention to what works, and adjust what does not.
+      I keep learning from the process. I invite you to do the same:
+      become a scientist of your own learning and behavior, experiment
+      with different approaches, and discover what helps you and others
+      learn and change.
   portrait_alt: "Fei Gao"
   primary_button:
     text: "Read the blog"
@@ -56,7 +59,7 @@ credentials:
   - label: "Affiliation"
     value: "Bowling Green State University"
   - label: "Focus"
-    value: "Learning analytics, gamification & simulation, online learning"
+    value: "Learning analytics, gamification & simulation, learning environment design"
   - label: "Recognition"
     value: "Stanford/Elsevier Top 2% Scientists, 2025"
 
@@ -66,7 +69,7 @@ credentials:
 # in the comment next to each card so posts group under these themes.
 write_about:
   eyebrow: "What I write about"
-  heading: "The science and practice of learning better"
+  heading: "The science and practice of learning and behavior change"
   areas:
     - number: "I"                     # tag: science-of-learning
       title: "Science of learning"
@@ -74,21 +77,22 @@ write_about:
         How learning works: memory, attention, and how the brain changes
         with practice. I draw on my own research and the work of others to
         explore what the science means for everyday learning.
-    - number: "II"                    # tag: motivation
-      title: "Motivation"
+    - number: "II"                    # tags: motivation, behavior change
+      title: "Motivation & behavior change"
       text: >-
-        Why we start, why we quit, and what keeps us going. Motivation is
-        at the heart of my research, and I write about what the science
-        tells us and how to put it to work in your own learning.
+        Why we start, why we quit, what keeps us going, and how we turn
+        intentions into action. I write about what the science tells us
+        and how to put it to work in our own learning and habits.
     - number: "III"                   # tag: tools
       title: "Tools & techniques"
       text: >-
-        Mnemonics, spaced practice, retrieval, and other techniques supported by scientific evidence. What they are, when they help, and how to
-        put them into practice.
+        Mnemonics, spaced practice, retrieval, habit design, and other
+        techniques supported by scientific evidence. What they are, when
+        they help, and how to put them into practice.
     - number: "IV"                    # tag: books
       title: "Books"
       text: >-
-        Notes on books about learning and learning design: the ideas in
+        Notes on books about learning and behavior design: the ideas in
         each book, the research behind the ideas, and where the evidence
         supports, complicates, or challenges those ideas.
 
@@ -108,17 +112,19 @@ about:
       Green State University, where I also serve as Associate Dean for
       Faculty Affairs and Research. I earned my Ph.D. in Educational
       Psychology and Educational Technology from Michigan State University,
-      and I have studied how people learn ever since. My research is
+      and I have studied how people learn, and how to design learning
+      environments for behavior change, ever since. My research is
       funded by the National Science Foundation, and I serve as Associate
       Editor for <em>Educational Technology &amp; Society</em> and the
       <em>Online Learning Journal</em>.
     - >-
       Away from work, I am an avid reader and a curious learner. I read
-      widely on the science of learning, from motivation to memory to brain
-      plasticity. This site is where I reflect on my
-      own experiences as a learner, educator, and researcher, and write
-      about research worth knowing, tools worth trying, and books worth
-      reading about how we learn. 
+      widely on the science of learning and behavior change, from
+      motivation and memory to brain plasticity and habit formation.
+      This site is where I reflect on my own experiences as a learner,
+      educator, and researcher, and write about research worth knowing,
+      tools worth trying, and books worth reading about how we learn
+      and change.
 
 
 # ---------- Research summary on the homepage ----------
