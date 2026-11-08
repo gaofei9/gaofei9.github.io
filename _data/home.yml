@@ -17,28 +17,32 @@
 
 # Shown in search results and when the page is shared.
 meta_description: >-
-  Fei Gao, learning scientist and professor at Bowling Green State University.
+  Fei Gao, learning scientist, behavior design scientist, and professor
+  at Bowling Green State University.
   Writing on the science of learning and behavior change, tools and
   techniques, and books.
 
 
 # ---------- Top of the page ----------
 hero:
-  eyebrow: "Learning & Behavior Design Scientist"
+  eyebrow: "Learning Scientist & Behavior Design Scientist"
   name: "Fei Gao"
   # One entry per paragraph.
   lede_paragraphs:
     - >-
-      How can we cultivate the motivation to learn and grow, learn more
-      effectively, and foster positive behavior change in ourselves and others?
+      How can we cultivate the motivation to learn and grow, make our
+      learning more effective, and foster positive behavior change in
+      ourselves and others?
     - >-
       I seek answers to these questions by studying what helps people
-      learn and change their behaviors: the science of motivation, the
-      neuroscience of how our brains work, the environments that 
-      support learning and behavior change, and the evidence-based tools
-      and strategiesthat put the science into practice.
+      learn and change their behaviors: the psychological and neural
+      processes through which people think, feel, learn, make decisions,
+      and form habits; the social, physical, and digital environments
+      that shape behavior; and evidence-based methods for diagnosing
+      barriers, designing support, and evaluating whether change lasts.
     - >-
-      As a learning and behavior design scientist, I approach my own
+      As a learning scientist and behavior design scientist, I approach
+      my own
       learning and everyday habits as an ongoing experiment. I try different
       approaches, pay attention to what works, and adjust what does not.
       I keep learning from the process. I invite you to do the same:
