@@ -80,7 +80,7 @@ Arthur and colleagues (2003) make a related point about training: trained skills
 
 ## What does this mean for designing educational or training programs?
 
-Information still has a place. The authors recommend introducing some basic information about a behavior to an audience that is not familiar with it. However, when a program is meant to change what people do, the content is only one part of the design. Whether people actually do what the program teaches may depend not only on what they know but also on the practice they get, the support of the people around them, the reminders they receive, and their access to the resources they need.[^scope]
+Information still has a place. The authors recommend providing basic information when an audience is unfamiliar with a behavior or its purpose. However, when a program aims to change behavior, information is only one part of the design. Whether people perform the behavior may also depend on opportunities to practice it, support from others, timely reminders, and access to the resources they need.[^scope]
 
 ## References
 
